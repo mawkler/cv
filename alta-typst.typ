@@ -1,4 +1,4 @@
-#let primary_colour = rgb("#3E0C87") // vivid purple
+#let primary_color = rgb("#3E0C87") // vivid purple
 
 #let icon(name, shift: 1.5pt) = {
   box(
@@ -14,16 +14,16 @@
   let icon = icon.with(shift: 2.5pt)
 
   services.map(service => {
-      icon(service.name)
+    icon(service.name)
 
-      if "display" in service.keys() {
-        link(service.link)[#{service.display}]
-      } else {
-        link(service.link)
-      }
-    }).join(h(10pt))
+    if "display" in service.keys() {
+      link(service.link)[#{service.display}]
+    } else {
+      link(service.link)
+    }
+  }).join(h(10pt))
   [
-    
+
   ]
 }
 
@@ -40,19 +40,16 @@
 
   h(1fr)
 
-  while (not done){
-    let colour = rgb("#c0c0c0") // grey
+  while (not done) {
+    let color = rgb("#c0c0c0") // grey
 
-    if (i <= rating){
-      colour = primary_colour
+    if (i <= rating) {
+      color = primary_color
     }
 
-    box(circle(
-      radius: 4pt,
-      fill: colour
-    ))
+    box(circle(radius: 4pt, fill: color))
 
-    if (max_rating == i){
+    if (max_rating == i) {
       done = true
     } else {
       // no spacing on last
@@ -80,21 +77,13 @@
 
   show heading.where(
     level: 2
-  ): it => text(
-      fill: primary_colour,
-    [
-      #{it.body}
-      #v(-7pt)
-      #line(length: 100%, stroke: 1pt + primary_colour)
-    ]
-  )
+  ): it => text(fill: primary_color, [
+    #{it.body}
+    #v(-7pt)
+    #line(length: 100%, stroke: 1pt + primary_color)
+  ])
 
-  show heading.where(
-    level: 4
-  ): it => text(
-    fill: primary_colour,
-    it.body
-  )
+  show heading.where(level: 4): it => text(fill: primary_color, it.body)
 
   [= #name]
 
