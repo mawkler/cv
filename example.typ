@@ -1,4 +1,4 @@
-#import "alta-typst.typ": alta, term, skill
+#import "alta-typst.typ": alta, experience, skill
 
 #alta(
   name: "John Smith",
@@ -12,19 +12,13 @@
   [
     == Experience
 
-    === Junior Software Engineer
-
-    _Company Two_\
-    #term[Jul 2021 --- Jul 2022][London, UK]
+    #experience[Junior Software Engineer][Company Two][Jul 2021 --- Jul 2022][London, UK]
 
     - #lorem(15)
     - #lorem(10)
     - #lorem(24)
 
-    === Junior Systems Administrator
-
-    _Company 1_\
-    #term[Oct 2019 --- Jul 2021][Bournemouth, UK]
+    #experience[Junior Systems Administrator][Company 1][Oct 2019 --- Jul 2021][Bournemouth, UK]
 
     - #lorem(20)
     - #lorem(10)
@@ -33,17 +27,11 @@
 
     == Education
 
-    === Higher
-
-    _University Name_\
-    #term[Sep 2019 --- Jul 2023][Location, UK]
+    #experience[Higher][University Name][Sep 2019 --- Jul 2023][Location, UK]
 
     B.Sc. Computer Science with Year in Industry. #lorem(10)
 
-    === A-Levels
-
-    _Place Grammar School_\
-    #term[Sep 2017 --- Aug 2019][Place, UK]
+    #experience[A-Levels][Place Grammar School][Sep 2017 --- Aug 2019][Place, UK]
 
     #lorem(10)
 

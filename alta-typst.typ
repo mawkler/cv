@@ -27,8 +27,11 @@
   ]
 }
 
-#let term(period, location) = {
-  text(9pt)[#icon("calendar") #period #h(1fr) #icon("location") #location]
+#let experience(name, company_name, period, location) = {
+  heading(level: 3, {
+    name; h(1fr); icon("calendar"); text(9pt, period)
+  })
+  company_name; h(1fr); icon("location"); text(9pt, location)
 }
 
 #let max_rating = 5
