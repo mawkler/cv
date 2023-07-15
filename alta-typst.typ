@@ -33,33 +33,16 @@
 
 #let max_rating = 5
 #let skill(name, rating) = {
-  let done = false
-  let i = 1
-
-  name
-
-  h(1fr)
-
-  while (not done) {
-    let color = rgb("#c0c0c0") // grey
-
-    if (i <= rating) {
-      color = primary_color
+  let circles = range(1, max_rating).map(i => {
+    let color = primary_color
+    if i > rating {
+      color = rgb("#c0c0c0") // grey
     }
 
     box(circle(radius: 4pt, fill: color))
+  }).join(h(4pt))
 
-    if (max_rating == i) {
-      done = true
-    } else {
-      // no spacing on last
-      h(2pt)
-    }
-
-    i += 1
-  }
-
-  [\ ]
+  name; h(1fr); circles; [\ ]
 }
 
 
