@@ -28,7 +28,7 @@
   heading(level: 3, {
     name; h(1fr); icon("calendar"); text(9pt, period)
   })
-  company_name; h(1fr); icon("location"); text(9pt, location)
+  text(style: "italic", company_name); h(1fr); icon("location"); text(9pt, location)
 }
 
 #let max_rating = 5

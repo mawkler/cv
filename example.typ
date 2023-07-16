@@ -10,75 +10,47 @@
   ),
   tagline: [Software Engineer],
   [
-    == Experience
+    == Work Experience
 
-    #experience[Junior Software Engineer][Company Two][Jul 2021 --- Jul 2022][London, UK]
+    #experience[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
-    - #lorem(15)
-    - #lorem(10)
-    - #lorem(24)
+    My work as a summer intern during 2016 as well as 2017 involved building tools that simplify the management of radio  software databases, from scratch. During my first summer I worked mainly on a web client written in AngularJS. During my second summer I worked primarily with text parsing using Python. The work was done in an agile manner in teams of 2--5 people.
 
-    #experience[Junior Systems Administrator][Company 1][Oct 2019 --- Jul 2021][Bournemouth, UK]
+    #experience[Programming and CAD teacher][Hello World!][2018][Stockholm]
 
-    - #lorem(20)
-    - #lorem(10)
+    Hello World! is a Swedish non-profit association that teaches kids and teenagers digital skills. I taught CAD and 3D-printing, programming of microcontrollers such as Arduinos using Python, as well as Lua programming. My work at Hello World! improved both my pedagogical and leadership skills. It also confirmed to me how much I love teaching.
 
-    References available on request
+    #experience[Computer science lab teacher][Uppsala University][2017, 2019][Uppsala]
+
+    I taught and guided students during computer labs in the course Program Design and Data Structures. The labs included many practical parts like Haskell programming, calculating time complexities, proof by induction, etc. During this work I got the chance to improve my pedagogical skills.
 
     == Education
 
-    #experience[Higher][University Name][Sep 2019 --- Jul 2023][Location, UK]
+    #experience[Master Programme in Computer and Information Engineering, 300 c– Specialization in Software Engineering][Uppsala University][2015-2021][Uppsala]
 
-    B.Sc. Computer Science with Year in Industry. #lorem(10)
+    Programming, mathematics and problem solving are three basic building blocks of the programme. For instance, I gained experience working in cross-functional teams, creating software requirements as well as product development in an agile manner.
 
-    #experience[A-Levels][Place Grammar School][Sep 2017 --- Aug 2019][Place, UK]
+    #experience[Music programme][Wik's Folkhögskola][2014-2015][Uppsala]
 
-    #lorem(10)
+    Music education focused on musical variety and expression in song writing as well as live performance and music theory.
+
+    #experience[Natural Science Program with aesthetic orientation music][Viktor Rydberg Gymnasium Odenplan][2011-2014][Stockholm]
+
+    Natural science courses, as well as one in digital content creation
 
     == Interests
 
-    - Walks on the beach
-    - #lorem(8)
-    - #lorem(6)
-    - #lorem(4)
-    - #lorem(12)
+		Neovim ~•~ Open source ~•~ Rust ~•~ Tooling ~•~ Music
   ],
   [
-    == Projects
-
-    ==== Some project
-
-    #lorem(30)
-
-    ==== Project with a longer name
-
-    #lorem(20)
-
-    ==== Employee Appraisal System
-
-    - #lorem(15)
-    - #lorem(10)
-    - #lorem(20)
-
-    ==== Hackathons
-
-    / Hack1: #lorem(20)
-    / TwoHackTwo: #lorem(15)
-
-    ==== Project 4
-
-    - #lorem(30)
-    - #lorem(10)
-
-    ==== Project Five
-
-    - #lorem(23)
-
     == Skills
 
-    #skill("Go", 5)
-    #skill("TypeScript", 3)
-    #skill("Git", 1)
-    #skill("Typst", 1)
+    #skill("Rust", 2)
+    #skill("TypeScript", 5)
+    #skill("Python", 3)
+    #skill("Java", 3)
+    #skill("Haskell", 3)
+    #skill("SQL", 3)
+    #skill("Typst", 2)
   ],
 )
