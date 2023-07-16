@@ -1,14 +1,14 @@
 #import "alta-typst.typ": alta, experience, skill
 
 #alta(
-  name: "John Smith",
+  name: "Melker Ulander",
   links: (
-    (name: "email", link: "mailto:contact@example.com"),
-    (name: "website", link: "https://example.com/", display: "example.com"),
-    (name: "github", link: "https://github.com/example", display: "@example"),
-    (name: "linkedin", link: "https://linkedin.com/in/example", display: "John Smith"),
+    (name: "email", link: "mailto:melker.ulander@pm.me"),
+    (name: "github", link: "https://github.com/mawkler", display: "mawkler"),
+    (name: "website", link: "https://fosstodon.org/@mawkler", display: "mawkler@fosstodon.org"),
+    (name: "linkedin", link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander"),
   ),
-  tagline: [Software Engineer. #lorem(10)],
+  tagline: [Software Engineer],
   [
     == Experience
 
