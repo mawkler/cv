@@ -22,9 +22,6 @@
       link(service.link)
     }
   }).join(h(10pt))
-  [
-
-  ]
 }
 
 #let experience(name, company_name, period, location) = {
@@ -73,9 +70,9 @@
 
   [= #name]
 
-  findMe(links)
+  tagline; [\ ]
 
-  tagline
+  findMe(links)
 
   grid(
     columns: (0.49fr, 0.49fr),
