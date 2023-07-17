@@ -33,9 +33,9 @@
 
 #let max_rating = 5
 #let skill(name, rating) = {
-  let circles = range(1, max_rating).map(i => {
+  let circles = range(0, max_rating).map(i => {
     let color = primary_color
-    if i > rating {
+    if i >= rating {
       color = rgb("#c0c0c0") // grey
     }
 
@@ -54,9 +54,7 @@
   right,
 ) = {
   set text(9.8pt, font: "IBM Plex Sans")
-  set page(
-    margin: (x: 54pt, y: 52pt),
-  )
+  set page(margin: (x: 35pt, y: 30pt))
 
   show heading.where(
     level: 2
