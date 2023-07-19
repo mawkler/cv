@@ -28,6 +28,7 @@
   heading(level: 3, {
     name; h(1fr); icon("calendar"); text(9pt, period)
   })
+  v(-3pt)
   text(style: "italic", company_name); h(1fr); icon("location"); text(9pt, location)
 }
 
@@ -45,6 +46,15 @@
   name; h(1fr); circles; [\ ]
 }
 
+// Produces the LaTeX symbol
+#let LaTeX = style(styles => {
+  let l = measure(text(1em, "L"), styles)
+  let a = measure(text(0.7em, "A"), styles)
+  let A = text(0.7em, baseline: a.height - l.height, "A")
+  let e = measure(text(1em, "E"), styles)
+  let E = text(1em, baseline: e.height / 4, "E")
+  box("L" + h(-0.3em) + A + h(-0.1em) + "T" + h(-0.1em) + E + h(-0.125em) + "X")
+})
 
 #let alta(
   name: "",
@@ -73,7 +83,7 @@
   findMe(links)
 
   grid(
-    columns: (0.49fr, 0.49fr),
+    columns: (0.65fr, 0.35fr),
     gutter: 15pt,
     left,
     right,

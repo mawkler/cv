@@ -1,4 +1,4 @@
-#import "alta-typst.typ": alta, experience, skill
+#import "alta-typst.typ": alta, experience, skill, LaTeX
 
 #alta(
   name: "Melker Ulander",
@@ -11,6 +11,10 @@
   tagline: [Software Engineer],
   [
     == Work Experience
+
+    #experience[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
+
+    RESTful back-end development with Azure Functions in TypeScript/Node.
 
     #experience[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
@@ -26,7 +30,7 @@
 
     == Education
 
-    #experience[Master Programme in Computer and Information Engineering, 300 c– Specialization in Software Engineering][Uppsala University][2015-2021][Uppsala]
+    #experience[Master Programme in Computer and Information Engineering, 300 c --- Specialization in Software Engineering][Uppsala University][2015-2021][Uppsala]
 
     Programming, mathematics and problem solving are three basic building blocks of the programme. For instance, I gained experience working in cross-functional teams, creating software requirements as well as product development in an agile manner.
 
@@ -43,14 +47,49 @@
 		Neovim ~•~ Open source ~•~ Rust ~•~ Tooling ~•~ Music
   ],
   [
-    == Skills
+    == Programming
+
+    === Languages
 
     #skill("Rust", 2)
     #skill("TypeScript", 5)
+
+    #skill("Lua", 4)
     #skill("Python", 3)
     #skill("Java", 3)
     #skill("Haskell", 3)
     #skill("SQL", 3)
+    #skill("HTML/CSS", 4)
+    #skill("C/C++", 2)
+    #skill("C#", 2)
+    #skill("R", 1)
     #skill("Typst", 2)
+    #skill(LaTeX, 4)
+
+    === Other technologies
+
+    #skill("Vim/Neovim", 5)
+    #skill("Linux", 4)
+    #skill("Git", 5)
+    #skill("OpenAPI/Swagger", 3)
+    #skill("Jest", 5)
+    #skill([Micro#{text(12pt, [#sym.ast.op #h(-3pt) #sym.ast.op])}ft Azure], 3)
+    #skill("Serverless (Azure Functions)", 3)
+
+    === Methodologies
+
+    #skill("Domain Driven Design", 4)
+    #skill("Agile", 3)
+    #skill("REST", 4)
+
+    == Spoken Languages
+
+    #skill("Swedish", 5)
+    #skill("English", 5)
+    #skill("Spanish", 1)
+
+    == Other Merits
+
+    - Driver's license class B since 2015
   ],
 )
