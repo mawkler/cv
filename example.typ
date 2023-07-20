@@ -5,7 +5,7 @@
   links: (
     (name: "email", link: "mailto:melker.ulander@pm.me"),
     (name: "github", link: "https://github.com/mawkler", display: "mawkler"),
-    (name: "website", link: "https://fosstodon.org/@mawkler", display: "mawkler@fosstodon.org"),
+    (name: "website", link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler"),
     (name: "linkedin", link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander"),
   ),
   tagline: [Software Engineer],
@@ -44,7 +44,7 @@
 
     == Interests
 
-		Neovim ~•~ Open source ~•~ Rust ~•~ Tooling ~•~ Music
+		Neovim ~•~ Open source ~•~ Rust ~•~ Tooling ~•~ Music ~•~ Climbing ~•~ Snowboarding
   ],
   [
     == Programming

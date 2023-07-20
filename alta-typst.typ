@@ -56,6 +56,20 @@
   box("L" + h(-0.3em) + A + h(-0.1em) + "T" + h(-0.1em) + E + h(-0.125em) + "X")
 })
 
+#let header_info(name, links, tagline, image_path) = {
+  grid(
+    columns: (6fr, 1fr),
+    gutter: 15pt,
+    align(start + horizon, {
+      [= #name]
+      tagline
+      v(0pt)
+      findMe(links)
+    }),
+    align(end + horizon, image(image_path, height: 8%))
+  )
+}
+
 #let alta(
   name: "",
   links: (),
@@ -76,11 +90,7 @@
 
   show heading.where(level: 4): it => text(fill: primary_color, it.body)
 
-  [= #name]
-
-  tagline; [\ ]
-
-  findMe(links)
+  header_info(name, links, tagline, "gru.png")
 
   grid(
     columns: (0.65fr, 0.35fr),
