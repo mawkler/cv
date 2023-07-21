@@ -53,7 +53,6 @@
 
     #skill("Rust", 2)
     #skill("TypeScript", 5)
-
     #skill("Lua", 4)
     #skill("Python", 3)
     #skill("Java", 3)
