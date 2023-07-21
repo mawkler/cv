@@ -70,6 +70,20 @@
   )
 }
 
+#let bubble(content) = {
+  box(
+    fill: primary_color,
+    inset: 3.5pt,
+    radius: 6pt,
+    text(weight: "bold", fill: white, content)
+  )
+}
+
+#let list_interests(interests) = {
+  set par(leading: 5pt) // Make line height slightly smaller
+  interests.map(interest => bubble(interest)).join(h(4pt))
+}
+
 #let alta(
   name: "",
   links: (),
@@ -78,7 +92,7 @@
   right,
 ) = {
   set text(9.8pt, font: "IBM Plex Sans")
-  set page(margin: (x: 35pt, y: 30pt))
+  set page(margin: (x: 32pt, y: 25pt))
 
   show heading.where(
     level: 2

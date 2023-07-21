@@ -1,4 +1,4 @@
-#import "alta-typst.typ": alta, experience, skill, LaTeX
+#import "alta-typst.typ": alta, experience, skill, LaTeX, bubble, list_interests
 
 #alta(
   name: "Melker Ulander",
@@ -44,7 +44,17 @@
 
     == Interests
 
-		Neovim ~•~ Open source ~•~ Rust ~•~ Tooling ~•~ Music ~•~ Climbing ~•~ Snowboarding
+    #list_interests((
+      "Neovim",
+      "Open source",
+      "Rust",
+      "Tooling",
+      "Music",
+      "Computer games",
+      "Board games",
+      "Climbing",
+      "Snowboarding"
+    ))
   ],
   [
     == Programming
