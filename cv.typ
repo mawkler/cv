@@ -12,6 +12,8 @@
   [
     == Work Experience
 
+    #set par(justify: true)
+
     #experience[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
 
     RESTful back-end development with Azure Functions in TypeScript/Node.

@@ -24,15 +24,36 @@
   }).join(h(10pt))
 }
 
-// TODO: Add thumbnail to the left of the `name`/`company_name`
-#let experience(name, company_name, period, location) = {
-  heading(level: 3, {
-    name; h(1fr); text(9pt, period); h(3pt); icon("calendar")
-  })
-  v(-3pt)
-  text(style: "italic", company_name); h(1fr); text(9pt, location); h(3pt); icon("location")
-}
 
+#let experience(name, company_name, period, location) = {
+  set table(
+    inset: 0pt,
+    stroke: none
+  )
+  table(
+    columns: (20pt, 1fr),
+    column-gutter: 5pt,
+    image("gru.png"), // TODO: dependency inject image
+    table(
+      columns: (1fr, auto),
+      align: (x, y) => (left, right).at(x),
+      {
+        set par(justify: false)
+
+        text(weight: "bold", name)
+        v(5pt)
+      },
+      {
+        set align(right + bottom)
+        set text(9pt)
+
+        period; h(3pt); icon("calendar")
+      },
+        text(style: "italic", company_name),
+        { location; h(3pt); icon("location") },
+    )
+  )
+}
 #let max_rating = 5
 #let skill(name, rating) = {
   let circles = range(0, max_rating).map(i => {
