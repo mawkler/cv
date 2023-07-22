@@ -24,12 +24,13 @@
   }).join(h(10pt))
 }
 
+// TODO: Add thumbnail to the left of the `name`/`company_name`
 #let experience(name, company_name, period, location) = {
   heading(level: 3, {
-    name; h(1fr); icon("calendar"); text(9pt, period)
+    name; h(1fr); text(9pt, period); h(3pt); icon("calendar")
   })
   v(-3pt)
-  text(style: "italic", company_name); h(1fr); icon("location"); text(9pt, location)
+  text(style: "italic", company_name); h(1fr); text(9pt, location); h(3pt); icon("location")
 }
 
 #let max_rating = 5
@@ -105,6 +106,8 @@
   show heading.where(level: 4): it => text(fill: primary_color, it.body)
 
   header_info(name, links, tagline, "gru.png")
+
+  v(-8pt)
 
   grid(
     columns: (0.65fr, 0.35fr),
