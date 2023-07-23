@@ -1,7 +1,7 @@
 #let primary_color = rgb("#3E0C87") // vivid purple
 #import "@preview/fontawesome:0.1.0": *
 
-#let findMe(services) = {
+#let contact_info(services) = {
   let glyph(icon) = {
     set text(10pt, fill: primary_color)
     box(baseline: 2.5pt, height: 10pt, text(icon))
@@ -14,13 +14,26 @@
     glyph(service.icon)
 
     if "display" in service.keys() {
-      link(service.link)[#{service.display}]
+      link(service.link, service.display)
     } else {
       link(service.link)
     }
   }).join(h(10pt))
 }
 
+#let header_info(name, links, tagline, image_path) = {
+  grid(
+    columns: (6fr, 1fr),
+    gutter: 15pt,
+    align(start + horizon, {
+      [= #name]
+      tagline
+      v(0pt)
+      contact_info(links)
+    }),
+    align(end + horizon, image(image_path, height: 8%))
+  )
+}
 
 #let experience(image_path, name, company_name, period, location) = {
   set table(
@@ -69,8 +82,9 @@
   v(-5pt)
 }
 
-#let max_rating = 5
 #let skill(name, rating) = {
+  let max_rating = 5
+
   let circles = range(0, max_rating).map(i => {
     let color = primary_color
     if i >= rating {
@@ -93,20 +107,6 @@
   box("L" + h(-0.3em) + A + h(-0.1em) + "T" + h(-0.1em) + E + h(-0.125em) + "X")
 })
 
-#let header_info(name, links, tagline, image_path) = {
-  grid(
-    columns: (6fr, 1fr),
-    gutter: 15pt,
-    align(start + horizon, {
-      [= #name]
-      tagline
-      v(0pt)
-      findMe(links)
-    }),
-    align(end + horizon, image(image_path, height: 8%))
-  )
-}
-
 #let bubble(content) = {
   box(
     fill: primary_color,
@@ -121,7 +121,7 @@
   interests.map(interest => bubble(interest)).join(h(4pt))
 }
 
-#let alta(
+#let cv(
   name: "",
   links: (),
   tagline: [],

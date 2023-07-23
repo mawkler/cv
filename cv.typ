@@ -1,7 +1,7 @@
-#import "alta-typst.typ": alta, experience, skill, LaTeX, bubble, list_interests
+#import "alta-typst.typ": cv, experience, skill, LaTeX, bubble, list_interests
 #import "@preview/fontawesome:0.1.0": *
 
-#alta(
+#cv(
   name: "Melker Ulander",
   links: (
     (link: "mailto:melker.ulander@pm.me", icon: fa-at()),
