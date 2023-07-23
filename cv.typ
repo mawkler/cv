@@ -130,6 +130,7 @@
 ) = {
   set text(9.8pt, font: "IBM Plex Sans")
   set page(margin: (x: 32pt, y: 25pt))
+  set par(justify: true)
 
   show heading.where(
     level: 2

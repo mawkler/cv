@@ -13,8 +13,6 @@
   [
     == Work Experience
 
-    #set par(justify: true)
-
     #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
 
     RESTful back-end development with Azure Functions in TypeScript/Node.
