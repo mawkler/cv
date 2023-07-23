@@ -15,7 +15,7 @@
 
     #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
 
-    Primarily RESTful back-end development with Azure Functions in TypeScript/Node.
+    RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on domain-driven design, security and CI/CD. Several web-APIs were designed, deployed and maintained.
 
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
@@ -88,7 +88,7 @@
 
     === Methodologies
 
-    #skill("Domain Driven Design", 4)
+    #skill("Domain-Driven Design", 4)
     #skill("Agile", 3)
     #skill("REST", 4)
 
