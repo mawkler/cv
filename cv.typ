@@ -117,17 +117,11 @@
 }
 
 #let list_interests(interests) = {
-  set par(leading: 5pt) // Make line height slightly smaller
+  set par(leading: 5pt, justify: false)
   interests.map(interest => bubble(interest)).join(h(4pt))
 }
 
-#let cv(
-  name: "",
-  links: (),
-  tagline: [],
-  left,
-  right,
-) = {
+#let cv( name: "", links: (), tagline: [], left, right) = {
   set text(9.8pt, font: "IBM Plex Sans")
   set page(margin: (x: 32pt, y: 25pt))
   set par(justify: true)

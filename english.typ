@@ -15,7 +15,7 @@
 
     #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
 
-    RESTful back-end development with Azure Functions in TypeScript/Node.
+    Primarily RESTful back-end development with Azure Functions in TypeScript/Node.
 
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
@@ -31,7 +31,7 @@
 
     == Education
 
-    #experience("images/uppsala.png")[Master Programme in Computer and Information Engineering, 300 c --- Specialization in Software Engineering][Uppsala University][2015-2021][Uppsala]
+    #experience("images/uppsala.png")[Master Programme in Computer and Information Engineering, 300 c --- Software Engineering Specialization][Uppsala University][2015-2021][Uppsala]
 
     Programming, mathematics and problem solving are three basic building blocks of the programme. For instance, I gained experience working in cross-functional teams, creating software requirements as well as product development in an agile manner.
 
@@ -41,7 +41,7 @@
 
     #experience("images/viktor-rydberg.png")[Natural Science Program with aesthetic orientation music][Viktor Rydberg Gymnasium Odenplan][2011-2014][Stockholm]
 
-    Natural science courses, as well as one in digital content creation
+    Natural science courses, as well as one in digital content creation.
 
     == Interests
 
@@ -58,11 +58,11 @@
     ))
   ],
   [
-    == Programming
+    == Programming Skills
 
     === Languages
 
-    #skill("Rust", 2)
+    #skill("Rust", 3)
     #skill("TypeScript", 5)
     #skill("Lua", 4)
     #skill("Python", 3)
