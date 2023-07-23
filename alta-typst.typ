@@ -30,27 +30,38 @@
     inset: 0pt,
     stroke: none
   )
+  set align(horizon)
+  let row_spacing = 2pt
+  let right_text_spacing = 9pt
+
   table(
     columns: (20pt, 1fr),
     column-gutter: 5pt,
-    image("gru.png"), // TODO: dependency inject image
+    image("gru.png"), // TODO: dependency inject image, perhaps fallback to some fontawesome glyph
     table(
       columns: (1fr, auto),
-      align: (x, y) => (left, right).at(x),
       {
         set par(justify: false)
 
         text(weight: "bold", name)
-        v(5pt)
       },
       {
         set align(right + bottom)
-        set text(9pt)
+        set text(right_text_spacing)
 
         period; h(3pt); icon("calendar")
       },
-        text(style: "italic", company_name),
-        { location; h(3pt); icon("location") },
+      {
+        v(row_spacing)
+        text(style: "italic", company_name)
+      },
+      {
+        set text(right_text_spacing)
+        set align(right)
+
+        v(row_spacing)
+        location; h(3pt); icon("location")
+      },
     )
   )
 }
