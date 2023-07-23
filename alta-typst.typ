@@ -25,7 +25,7 @@
 }
 
 
-#let experience(name, company_name, period, location) = {
+#let experience(image_path, name, company_name, period, location) = {
   set table(
     inset: 0pt,
     stroke: none
@@ -34,10 +34,14 @@
   let row_spacing = 2pt
   let right_text_spacing = 9pt
 
+  if image_path == none {
+    image_path = "gru.png"
+  }
+
   table(
     columns: (20pt, 1fr),
     column-gutter: 5pt,
-    image("gru.png"), // TODO: dependency inject image, perhaps fallback to some fontawesome glyph
+    image(image_path),
     table(
       columns: (1fr, auto),
       {
