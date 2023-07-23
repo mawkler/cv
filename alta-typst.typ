@@ -68,7 +68,10 @@
       },
     )
   )
+
+  v(-5pt)
 }
+
 #let max_rating = 5
 #let skill(name, rating) = {
   let circles = range(0, max_rating).map(i => {
