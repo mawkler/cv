@@ -1,107 +1,154 @@
-#import "alta-typst.typ": cv, experience, skill, LaTeX, bubble, list_interests
+#let primary_color = rgb("#3E0C87") // vivid purple
 #import "@preview/fontawesome:0.1.0": *
 
-#cv(
-  name: "Melker Ulander",
-  links: (
-    (link: "mailto:melker.ulander@pm.me", icon: fa-at()),
-    (link: "https://github.com/mawkler", display: "mawkler", icon: fa-github()),
-    (link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler", icon: fa-mastodon()),
-    (link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander", icon: fa-linkedin()),
-  ),
-  tagline: [Software Engineer],
-  [
-    == Work Experience
+#let contact_info(services) = {
+  let glyph(icon) = {
+    set text(10pt, fill: primary_color)
+    box(baseline: 2.5pt, height: 10pt, text(icon))
+    h(3pt)
+  }
 
-    #set par(justify: true)
+  set text(8pt)
 
-    #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
+  services.map(service => {
+    glyph(service.icon)
 
-    RESTful back-end development with Azure Functions in TypeScript/Node.
+    if "display" in service.keys() {
+      link(service.link, service.display)
+    } else {
+      link(service.link)
+    }
+  }).join(h(10pt))
+}
 
-    #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
+#let header_info(name, links, tagline, image_path) = {
+  grid(
+    columns: (6fr, 1fr),
+    gutter: 15pt,
+    align(start + horizon, {
+      [= #name]
+      tagline
+      v(0pt)
+      contact_info(links)
+    }),
+    align(end + horizon, image(image_path, height: 8%))
+  )
+}
 
-    My work as a summer intern during 2016 as well as 2017 involved building tools that simplify the management of radio  software databases, from scratch. During my first summer I worked mainly on a web client written in AngularJS. During my second summer I worked primarily with text parsing using Python. The work was done in an agile manner in teams of 2--5 people.
+#let experience(image_path, name, company_name, period, location) = {
+  set table(
+    inset: 0pt,
+    stroke: none
+  )
+  set align(horizon)
+  let row_spacing = 4pt
+  let right_text_font_size = 9pt
 
-    #experience("images/hello-world.png")[Programming and CAD teacher][Hello World!][2018][Stockholm]
+  if image_path == none {
+    image_path = "gru.png"
+  }
 
-    Hello World! is a Swedish non-profit association that teaches kids and teenagers digital skills. I taught CAD and 3D-printing, programming of microcontrollers such as Arduinos using Python, as well as Lua programming. My work at Hello World! improved both my pedagogical and leadership skills. It also confirmed to me how much I love teaching.
+  table(
+    columns: (20pt, 1fr),
+    column-gutter: 5pt,
+    image(image_path),
+    table(
+      columns: (1fr, auto),
+      {
+        set par(justify: false)
 
-    #experience("images/uppsala.png")[Computer science lab teacher][Uppsala University][2017, 2019][Uppsala]
+        text(weight: "bold", name)
+      },
+      {
+        set align(right + bottom)
+        set text(right_text_font_size)
 
-    I taught and guided students during computer labs in the course Program Design and Data Structures. The labs included many practical parts like Haskell programming, calculating time complexities, proof by induction, etc. During this work I got the chance to improve my pedagogical skills.
+        period; h(3pt); text(fill: primary_color, fa-calendar(10pt))
+      },
+      {
+        v(row_spacing)
+        text(style: "italic", company_name)
+      },
+      {
+        set text(right_text_font_size)
+        set align(right)
 
-    == Education
+        v(row_spacing)
+        location; h(3pt); text(fill: primary_color, fa-location-dot(10pt))
+      },
+    )
+  )
 
-    #experience("images/uppsala.png")[Master Programme in Computer and Information Engineering, 300 c --- Specialization in Software Engineering][Uppsala University][2015-2021][Uppsala]
+  v(-5pt)
+}
 
-    Programming, mathematics and problem solving are three basic building blocks of the programme. For instance, I gained experience working in cross-functional teams, creating software requirements as well as product development in an agile manner.
+#let skill(name, rating) = {
+  let max_rating = 5
 
-    #experience("images/wik.png")[Music programme][Wik's Folkhögskola][2014-2015][Uppsala]
+  let circles = range(0, max_rating).map(i => {
+    let color = primary_color
+    if i >= rating {
+      color = rgb("#c0c0c0") // grey
+    }
 
-    Music education focused on musical variety and expression in song writing as well as live performance and music theory.
+    box(circle(radius: 4pt, fill: color))
+  }).join(h(4pt))
 
-    #experience("images/viktor-rydberg.png")[Natural Science Program with aesthetic orientation music][Viktor Rydberg Gymnasium Odenplan][2011-2014][Stockholm]
+  name; h(1fr); circles; [\ ]
+}
 
-    Natural science courses, as well as one in digital content creation
+// Produces the LaTeX symbol
+#let LaTeX = style(styles => {
+  let l = measure(text(1em, "L"), styles)
+  let a = measure(text(0.7em, "A"), styles)
+  let A = text(0.7em, baseline: a.height - l.height, "A")
+  let e = measure(text(1em, "E"), styles)
+  let E = text(1em, baseline: e.height / 4, "E")
+  box("L" + h(-0.3em) + A + h(-0.1em) + "T" + h(-0.1em) + E + h(-0.125em) + "X")
+})
 
-    == Interests
+#let bubble(content) = {
+  box(
+    fill: primary_color,
+    inset: 3.5pt,
+    radius: 6pt,
+    text(weight: "bold", fill: white, content)
+  )
+}
 
-    #list_interests((
-      "Neovim",
-      "Open source",
-      "Rust",
-      "Tooling",
-      "Music",
-      "Computer games",
-      "Board games",
-      "Climbing",
-      "Snowboarding"
-    ))
-  ],
-  [
-    == Programming
+#let list_interests(interests) = {
+  set par(leading: 5pt) // Make line height slightly smaller
+  interests.map(interest => bubble(interest)).join(h(4pt))
+}
 
-    === Languages
+#let cv(
+  name: "",
+  links: (),
+  tagline: [],
+  left,
+  right,
+) = {
+  set text(9.8pt, font: "IBM Plex Sans")
+  set page(margin: (x: 32pt, y: 25pt))
 
-    #skill("Rust", 2)
-    #skill("TypeScript", 5)
-    #skill("Lua", 4)
-    #skill("Python", 3)
-    #skill("Java", 3)
-    #skill("Haskell", 3)
-    #skill("SQL", 3)
-    #skill("HTML/CSS", 4)
-    #skill("C/C++", 2)
-    #skill("C#", 2)
-    #skill("R", 1)
-    #skill("Typst", 2)
-    #skill(LaTeX, 4)
+  show heading.where(
+    level: 2
+  ): it => text(fill: primary_color, [
+    #{it.body}
+    #v(-7pt)
+    #line(length: 100%, stroke: 1pt + primary_color)
+  ])
 
-    === Other technologies
+  show heading.where(level: 4): it => text(fill: primary_color, it.body)
 
-    #skill("Vim/Neovim", 5)
-    #skill("Linux", 4)
-    #skill("Git", 5)
-    #skill("OpenAPI/Swagger", 3)
-    #skill("Jest", 5)
-    #skill([Micro#{text(12pt, [#sym.ast.op #h(-3pt) #sym.ast.op])}ft Azure], 3)
-    #skill("Serverless (Azure Functions)", 3)
+  header_info(name, links, tagline, "gru.png")
 
-    === Methodologies
+  v(-8pt)
 
-    #skill("Domain Driven Design", 4)
-    #skill("Agile", 3)
-    #skill("REST", 4)
-
-    == Spoken Languages
-
-    #skill("Swedish", 5)
-    #skill("English", 5)
-    #skill("Spanish", 1)
-
-    == Other Merits
-
-    - Driver's license class B since 2015
-  ],
-)
+  grid(
+    columns: (0.65fr, 0.35fr),
+    gutter: 15pt,
+    left,
+    right,
+  )
+}
