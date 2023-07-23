@@ -1,20 +1,17 @@
 #let primary_color = rgb("#3E0C87") // vivid purple
-
-#let icon(name, shift: 1.5pt) = {
-  box(
-    baseline: shift,
-    height: 10pt,
-    image(name + ".svg")
-  )
-  h(3pt)
-}
+#import "@preview/fontawesome:0.1.0": *
 
 #let findMe(services) = {
+  let glyph(icon) = {
+    set text(10pt, fill: primary_color)
+    box(baseline: 2.5pt, height: 10pt, text(icon))
+    h(3pt)
+  }
+
   set text(8pt)
-  let icon = icon.with(shift: 2.5pt)
 
   services.map(service => {
-    icon(service.name)
+    glyph(service.icon)
 
     if "display" in service.keys() {
       link(service.link)[#{service.display}]
@@ -31,8 +28,8 @@
     stroke: none
   )
   set align(horizon)
-  let row_spacing = 2pt
-  let right_text_spacing = 9pt
+  let row_spacing = 4pt
+  let right_text_font_size = 9pt
 
   if image_path == none {
     image_path = "gru.png"
@@ -51,20 +48,20 @@
       },
       {
         set align(right + bottom)
-        set text(right_text_spacing)
+        set text(right_text_font_size)
 
-        period; h(3pt); icon("calendar")
+        period; h(3pt); text(fill: primary_color, fa-calendar(10pt))
       },
       {
         v(row_spacing)
         text(style: "italic", company_name)
       },
       {
-        set text(right_text_spacing)
+        set text(right_text_font_size)
         set align(right)
 
         v(row_spacing)
-        location; h(3pt); icon("location")
+        location; h(3pt); text(fill: primary_color, fa-location-dot(10pt))
       },
     )
   )

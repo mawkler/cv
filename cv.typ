@@ -1,12 +1,13 @@
 #import "alta-typst.typ": alta, experience, skill, LaTeX, bubble, list_interests
+#import "@preview/fontawesome:0.1.0": *
 
 #alta(
   name: "Melker Ulander",
   links: (
-    (name: "email", link: "mailto:melker.ulander@pm.me"),
-    (name: "github", link: "https://github.com/mawkler", display: "mawkler"),
-    (name: "website", link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler"),
-    (name: "linkedin", link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander"),
+    (link: "mailto:melker.ulander@pm.me", icon: fa-at()),
+    (link: "https://github.com/mawkler", display: "mawkler", icon: fa-github()),
+    (link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler", icon: fa-mastodon()),
+    (link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander", icon: fa-linkedin()),
   ),
   tagline: [Software Engineer],
   [
