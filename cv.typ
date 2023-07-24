@@ -38,13 +38,12 @@
 }
 
 #let experience(image_path, name, company_name, period, location) = {
-  set table(
-    inset: 0pt,
-    stroke: none
-  )
+  set table( inset: 0pt, stroke: none)
   set align(horizon)
   let row_spacing = 4pt
   let right_text_font_size = 9pt
+
+  v(5pt)
 
   if image_path == none {
     image_path = "gru.png"
@@ -101,6 +100,7 @@
 
 // Produces the LaTeX symbol
 #let LaTeX = style(styles => {
+  set text(font: "Times New Roman") // TODO: look up actual name
   let l = measure(text(1em, "L"), styles)
   let a = measure(text(0.7em, "A"), styles)
   let A = text(0.7em, baseline: a.height - l.height, "A")
@@ -112,9 +112,9 @@
 #let bubble(content) = {
   box(
     fill: primary_color,
-    inset: 3.5pt,
+    inset: 4pt,
     radius: 6pt,
-    text(weight: "bold", fill: white, content)
+    text(weight: "extrabold", fill: white, content)
   )
 }
 
@@ -137,9 +137,8 @@
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
 
-  show heading.where(
-    level: 2
-  ): it => text(fill: primary_color, [
+  show heading.where(level: 2): it => text(fill: primary_color, [
+    #v(5pt)
     #{it.body}
     #v(-7pt)
     #line(length: 100%, stroke: 1pt + primary_color)
@@ -147,7 +146,7 @@
 
   show heading.where(level: 4): it => text(fill: primary_color, it.body)
 
-  header_info(name, links, tagline, "gru.png")
+  header_info(name, links, tagline, "images/profile.png")
 
   v(-8pt)
 
