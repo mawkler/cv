@@ -1,5 +1,7 @@
-#let primary_color = rgb("#3E0C87") // vivid purple
 #import "@preview/fontawesome:0.1.0": *
+
+#let primary_color = rgb("#3E0C87") // vivid purple
+#let dark_gray_color = rgb("#7c7c7c")
 
 #let contact_info(services) = {
   let glyph(icon) = {
@@ -88,7 +90,7 @@
   let circles = range(0, max_rating).map(i => {
     let color = primary_color
     if i >= rating {
-      color = rgb("#c0c0c0") // grey
+      color = rgb("#c0c0c0") // gray
     }
 
     box(circle(radius: 4pt, fill: color))
@@ -121,9 +123,18 @@
   interests.map(interest => bubble(interest)).join(h(4pt))
 }
 
-#let cv( name: "", links: (), tagline: [], left, right) = {
+#let footer(content) = [
+  #set align(center)
+  #set text(6.5pt, fill: dark_gray_color, font: "Fira Code")
+  #show link: underline
+
+  #line(length: 100%, stroke: 0.5pt + dark_gray_color)
+  #fa-chevron-right() #content
+]
+
+#let cv( name: "", links: (), tagline: [], left, right, footer_content) = {
   set text(9.8pt, font: "IBM Plex Sans")
-  set page(margin: (x: 32pt, y: 25pt))
+  set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
 
   show heading.where(
