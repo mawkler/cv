@@ -41,7 +41,7 @@
 
     #experience("images/viktor-rydberg.png")[Natural Science Program with aesthetic orientation music][Viktor Rydberg Gymnasium Odenplan][2011-2014][Stockholm]
 
-    Natural science courses, as well as one in digital content creation.
+    Natural science courses, music courses, as well as one in digital content creation.
 
     == Interests
 

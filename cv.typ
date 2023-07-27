@@ -3,6 +3,9 @@
 #let primary_color = rgb("#3E0C87") // vivid purple
 #let dark_gray_color = rgb("#7c7c7c")
 
+#let sans_serif_font = "Fira Sans"
+#let code_font = "Fira Code"
+
 #let contact_info(services) = {
   let glyph(icon) = {
     set text(10pt, fill: primary_color)
@@ -10,7 +13,7 @@
     h(3pt)
   }
 
-  set text(8pt)
+  set text(8pt, font: code_font)
 
   services.map(service => {
     glyph(service.icon)
@@ -24,6 +27,7 @@
 }
 
 #let header_info(name, links, tagline, image_path) = {
+  set text(font: sans_serif_font)
   grid(
     columns: (6fr, 1fr),
     gutter: 15pt,
@@ -40,14 +44,11 @@
 #let experience(image_path, name, company_name, period, location) = {
   set table( inset: 0pt, stroke: none)
   set align(horizon)
+  set text(font: sans_serif_font)
   let row_spacing = 4pt
   let right_text_font_size = 9pt
 
   v(5pt)
-
-  if image_path == none {
-    image_path = "gru.png"
-  }
 
   table(
     columns: (20pt, 1fr),
@@ -62,7 +63,7 @@
       },
       {
         set align(right + bottom)
-        set text(right_text_font_size)
+        set text(right_text_font_size, weight: "light")
 
         period; h(3pt); text(fill: primary_color, fa-calendar(10pt))
       },
@@ -71,7 +72,7 @@
         text(style: "italic", company_name)
       },
       {
-        set text(right_text_font_size)
+        set text(right_text_font_size, weight: "light")
         set align(right)
 
         v(row_spacing)
@@ -114,7 +115,7 @@
     fill: primary_color,
     inset: 4pt,
     radius: 6pt,
-    text(weight: "extrabold", fill: white, content)
+    text(weight: "bold", fill: white, font: sans_serif_font , content)
   )
 }
 
@@ -125,14 +126,14 @@
 
 #let footer(content) = [
   #set align(center)
-  #set text(6.5pt, fill: dark_gray_color, font: "Fira Code")
+  #set text(6.5pt, fill: dark_gray_color, font: code_font)
   #show link: underline
 
   #line(length: 100%, stroke: 0.5pt + dark_gray_color)
   #fa-chevron-right() #content
 ]
 
-#let cv( name: "", links: (), tagline: [], left, right, footer_content) = {
+#let cv(name: "", links: (), tagline: [], left, right, footer_content) = {
   set text(9.8pt, font: "IBM Plex Sans")
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
@@ -143,8 +144,8 @@
     #v(-7pt)
     #line(length: 100%, stroke: 1pt + primary_color)
   ])
-
   show heading.where(level: 4): it => text(fill: primary_color, it.body)
+  show heading: it => text(font: sans_serif_font, it)
 
   header_info(name, links, tagline, "images/profile.png")
 
