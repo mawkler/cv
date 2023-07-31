@@ -37,7 +37,7 @@
 
     #experience("images/wik.png")[Music programme][Wik's Folkhögskola][2014-2015][Uppsala]
 
-    Music education focused on musical variety and expression in song writing as well as live performance and music theory.
+    Music education with focus on musical variety and expression in song writing as well as live performance and music theory.
 
     #experience("images/viktor-rydberg.png")[Natural Science Program with aesthetic orientation music][Viktor Rydberg Gymnasium Odenplan][2011-2014][Stockholm]
 
