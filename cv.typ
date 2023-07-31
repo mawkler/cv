@@ -152,7 +152,7 @@
   v(-8pt)
 
   grid(
-    columns: (0.65fr, 0.35fr),
+    columns: (1fr, 0.54fr),
     gutter: 15pt,
     left,
     right,
