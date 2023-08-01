@@ -1,5 +1,7 @@
 name: Build CV
-on: [push]
+on:
+  push:
+    branches: [github-actions] # TODO: Change to main
 jobs:
   build_typst:
     runs-on: ubuntu-latest
@@ -12,5 +14,8 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
+          name: English PDF
           path: english.pdf
+      - name: Publish release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
