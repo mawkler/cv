@@ -1,0 +1,16 @@
+name: Build CV
+on: [push]
+jobs:
+  build_typst:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: Jarivanbakel/typst-action@v3
+        with:
+          input_files: english.typ
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: english.pdf
