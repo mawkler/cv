@@ -17,10 +17,9 @@ jobs:
           name: English PDF
           path: english.pdf
       - name: Publish release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          title: "Latest CV"
-          files: |
-            english.pdf
+          files: english.pdf
+          tag_name: latest
+          draft: false
+          prerelease: false
