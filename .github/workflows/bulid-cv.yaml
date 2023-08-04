@@ -8,10 +8,13 @@ jobs:
     steps:
       - name: Install Fonts
         run: |
-          sudo apt-get install fonts-font-awesome fonts-firacode
-          # Fira Sans doesn't exist in the Ubuntu repos
-          wget -O Fira_Sans.zip https://github.com/mozilla/Fira/zipball/master
-          unzip Fira_Sans.zip -d /usr/share/fonts/fira_sans/
+          sudo apt-get install fonts-firacode gh
+          # Fira Sans doesn't exist in the Ubuntu repos, and FontAwesome is missing one glyph for
+          # some reason when installed with apt-get
+          gh release download --repo tonsky/FiraCode --archive zip --output FiraCode.zip
+          gh release download --repo mozilla/Fira --archive zip --output FiraSans.zip
+          unzip FiraCode.zip -d /usr/share/fonts/fira_code/
+          unzip FiraSans.zip -d /usr/share/fonts/fira_sans/
           fc-cache -fv
       - name: Checkout repository
         uses: actions/checkout@v3
