@@ -9,8 +9,11 @@ jobs:
       - name: Install Fonts
         run: |
           wget -O Fira_Sans.zip https://github.com/mozilla/Fira/zipball/master
-          unzip -d fira_sans/ Fira_Sans.zip
-          mv fira_sans /usr/share/fonts/
+          unzip -d /usr/share/fonts/fira_sans/ Fira_Sans.zip
+          wget -O Font_Awesome.zip https://github.com/FortAwesome/Font-Awesome/zipball/master
+          unzip -d /usr/share/fonts/font_awesome/ Font_Awesome.zip
+          wget -O Fira_Code.zip https://github.com/tonsky/FiraCode/zipball/master
+          unzip -d /usr/share/fonts/fira_code/ Fira_Code.zip
           fc-cache -fv
       - name: Checkout repository
         uses: actions/checkout@v3
