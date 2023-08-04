@@ -10,12 +10,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }} # Required by GitHub Actions
         run: |
-          sudo apt-get install fonts-firacode gh
-          # Fira Sans doesn't exist in the Ubuntu repos, and FontAwesome is missing one glyph for
-          # some reason when installed with apt-get
-          gh release download --repo tonsky/FiraCode --archive zip --output FiraCode.zip
+          sudo apt-get install fonts-firacode
+          # Fira Sans doesn't exist in the Ubuntu repos
           gh release download --repo mozilla/Fira --archive zip --output FiraSans.zip
-          unzip FiraCode.zip -d /usr/share/fonts/fira_code/
+          # FontAwesome is missing one glyph for some reason when installed with apt-get
+          gh release download --repo FortAwesome/Font-Awesome --archive zip --output FontAwesome.zip
+          unzip FontAwesome.zip -d /usr/share/fonts/font_awesome/
           unzip FiraSans.zip -d /usr/share/fonts/fira_sans/
           fc-cache -fv
       - name: Checkout repository
