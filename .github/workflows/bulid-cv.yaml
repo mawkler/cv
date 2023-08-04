@@ -8,12 +8,10 @@ jobs:
     steps:
       - name: Install Fonts
         run: |
+          sudo apt-get install fonts-font-awesome fonts-firacode
+          # Fira Sans doesn't exist in the Ubuntu repos
           wget -O Fira_Sans.zip https://github.com/mozilla/Fira/zipball/master
-          unzip -d /usr/share/fonts/fira_sans/ Fira_Sans.zip
-          wget -O Font_Awesome.zip https://github.com/FortAwesome/Font-Awesome/zipball/master
-          unzip -d /usr/share/fonts/font_awesome/ Font_Awesome.zip
-          wget -O Fira_Code.zip https://github.com/tonsky/FiraCode/zipball/master
-          unzip -d /usr/share/fonts/fira_code/ Fira_Code.zip
+          unzip Fira_Sans.zip -d /usr/share/fonts/fira_sans/
           fc-cache -fv
       - name: Checkout repository
         uses: actions/checkout@v3
