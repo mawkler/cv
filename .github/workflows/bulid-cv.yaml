@@ -1,7 +1,7 @@
 name: Build CV
 on:
   push:
-    branches: [github-actions] # TODO: Change to main
+    branches: [main]
 jobs:
   build_typst_pdf:
     runs-on: ubuntu-latest
