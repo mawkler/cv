@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Fonts
+        env:
+          GH_TOKEN: ${{ github.token }} # Required by GitHub Actions
         run: |
           sudo apt-get install fonts-firacode gh
           # Fira Sans doesn't exist in the Ubuntu repos, and FontAwesome is missing one glyph for
