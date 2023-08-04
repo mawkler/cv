@@ -33,12 +33,18 @@ jobs:
           path: |
             english.pdf
             swedish.pdf
+      - name: Generate thumbnails
+        run: |
+          pdftoppm english.pdf english -png -singlefile
+          pdftoppm swedish.pdf swedish -png -singlefile
       - name: Publish release
         uses: softprops/action-gh-release@v1
         with:
           files: |
             english.pdf
             swedish.pdf
+            english.png
+            swedish.png
           tag_name: latest
           draft: false
           prerelease: false
