@@ -10,6 +10,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }} # Required by gh in GitHub Actions
         run: |
+          # Install required fonts
           sudo apt-get install fonts-firacode
           # Fira Sans doesn't exist in the Ubuntu repos
           gh release download --repo mozilla/Fira --archive zip --output FiraSans.zip
