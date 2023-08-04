@@ -6,6 +6,12 @@ jobs:
   build_typst:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Fonts
+        run: |
+          wget -O Fira_Sans.zip https://github.com/mozilla/Fira/zipball/master
+          unzip -d fira_sans/ Fira_Sans.zip
+          mv fira_sans /usr/share/fonts/
+          fc-cache -fv
       - name: Checkout repository
         uses: actions/checkout@v3
       - uses: Jarivanbakel/typst-action@v3
