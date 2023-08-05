@@ -18,12 +18,12 @@ Below you can download my CV as a PDF in either English or Swedish:
     <tr>
         <td>
             <a href="https://github.com/mawkler/cv/releases/download/latest/english.pdf">
-                <img src="./english-thumbnail.png" alt="English CV">
+                <img src="https://github.com/mawkler/cv/releases/download/latest/english-thumbnail.png" alt="English CV">
             </a>
         </td>
         <td>
             <a href="https://github.com/mawkler/cv/releases/download/latest/swedish.pdf">
-                <img src="./swedish-thumbnail.png" alt="Swedish CV">
+                <img src="https://github.com/mawkler/cv/releases/download/latest/swedish-thumbnail.png" alt="Swedish CV">
             </a>
         </td>
     </tr>
