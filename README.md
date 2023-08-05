@@ -2,7 +2,7 @@
 
 These are links to the PDF [in English](https://github.com/mawkler/cv/releases/download/latest/english.pdf) and [in Swedish](https://github.com/mawkler/cv/releases/download/latest/swedish.pdf).
 
-The PDFs are automatically built and deployed on each commit using my GitHub actions pipeline [here](./.github/workflows/bulid-cv.yaml)
+The PDFs are automatically built and deployed on each push using my GitHub actions pipeline [here](./.github/workflows/bulid-cv.yaml)
 
 ## Compile it yourself
 

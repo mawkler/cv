@@ -6,12 +6,12 @@ jobs:
   build_typst_pdf:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Fonts
+      - name: Install fonts
         env:
           GH_TOKEN: ${{ github.token }} # Required by gh in GitHub Actions
         run: |
-          # Install required fonts
-          sudo apt-get install fonts-firacode
+          # Install required fonts and pdftoppm
+          sudo apt-get install fonts-firacode poppler-utils
           # Fira Sans doesn't exist in the Ubuntu repos
           gh release download --repo mozilla/Fira --archive zip --output FiraSans.zip
           # FontAwesome is missing one glyph for some reason when installed with apt-get
