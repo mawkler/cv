@@ -2,14 +2,6 @@
 
 Below you can download my CV as a PDF in either English or Swedish:
 
-<style>
-    table, tr, td, th { border: none !important; }
-
-    th { font-size: x-large; }
-
-    img { width: 250px; }
-</style>
-
 <table cellspacing="0" cellpadding="0">
     <tr>
         <th>
