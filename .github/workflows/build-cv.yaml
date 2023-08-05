@@ -11,7 +11,8 @@ jobs:
           GH_TOKEN: ${{ github.token }} # Required by gh in GitHub Actions
         run: |
           # Install required fonts and pdftoppm
-          sudo apt-get install fonts-firacode poppler-utils
+          sudo apt-get update
+          sudo apt-get install fonts-firacode poppler-utils --fix-missing
           # Fira Sans doesn't exist in the Ubuntu repos
           gh release download --repo mozilla/Fira --archive zip --output FiraSans.zip
           # FontAwesome is missing one glyph for some reason when installed with apt-get
