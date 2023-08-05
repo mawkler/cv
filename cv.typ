@@ -1,19 +1,20 @@
 #import "@preview/fontawesome:0.1.0": *
 
-#let primary_color = rgb("#3E0C87") // vivid purple
-#let dark_gray_color = rgb("#7c7c7c")
+#let primary_color = rgb("#2b4277") // darker blue
+#let secondary_color = rgb("#677fb2") // lighter blue
+#let gray_color = rgb("#7c7c7c") // light gray
 
 #let sans_serif_font = "Fira Sans"
 #let code_font = "Fira Code"
 
 #let contact_info(services) = {
+  set text(10pt, fill: primary_color)
   let glyph(icon) = {
-    set text(10pt, fill: primary_color)
     box(baseline: 2.5pt, height: 10pt, text(icon))
     h(3pt)
   }
 
-  set text(8pt, font: code_font)
+  set text(8pt, weight: "bold", font: code_font)
 
   services.map(service => {
     glyph(service.icon)
@@ -65,7 +66,7 @@
         set align(right + bottom)
         set text(right_text_font_size, weight: "light")
 
-        period; h(3pt); text(fill: primary_color, fa-calendar(10pt))
+        period; h(3pt); text(fill: secondary_color, fa-calendar(10pt))
       },
       {
         v(row_spacing)
@@ -76,7 +77,7 @@
         set align(right)
 
         v(row_spacing)
-        location; h(3pt); text(fill: primary_color, fa-location-dot(10pt))
+        location; h(3pt); text(fill: secondary_color, fa-location-dot(10pt))
       },
     )
   )
@@ -88,7 +89,7 @@
   let max_rating = 5
 
   let circles = range(0, max_rating).map(i => {
-    let color = primary_color
+    let color = secondary_color
     if i >= rating {
       color = rgb("#c0c0c0") // gray
     }
@@ -112,7 +113,7 @@
 
 #let bubble(content) = {
   box(
-    fill: primary_color,
+    fill: secondary_color,
     inset: 4pt,
     radius: 6pt,
     text(weight: "bold", fill: white, font: sans_serif_font , content)
@@ -126,10 +127,10 @@
 
 #let footer(content) = [
   #set align(center)
-  #set text(6.5pt, fill: dark_gray_color, font: code_font)
+  #set text(6.5pt, fill: gray_color, font: code_font)
   #show link: underline
 
-  #line(length: 100%, stroke: 0.5pt + dark_gray_color)
+  #line(length: 100%, stroke: 0.5pt + gray_color)
   #fa-chevron-right() #content
 ]
 
