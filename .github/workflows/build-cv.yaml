@@ -35,8 +35,8 @@ jobs:
             swedish.pdf
       - name: Generate thumbnails
         run: |
-          pdftoppm english.pdf english -png -singlefile
-          pdftoppm swedish.pdf swedish -png -singlefile
+          pdftoppm english.pdf english-thumbnail -png -singlefile
+          pdftoppm swedish.pdf swedish-thumbnail -png -singlefile
       - name: Publish release
         uses: softprops/action-gh-release@v1
         with:
