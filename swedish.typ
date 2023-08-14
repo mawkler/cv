@@ -104,5 +104,5 @@
 
     - B-körkort sedan 2015
   ],
-  [Mitt CV är byggt i #link("https://github.com/typst/typst", "Typst"). Om du är nyfiken så finns källkoden #link("https://github.com/mawkler/cv", "här").]
+  [Det här CV:t är skrivet i markup-språket #link("https://github.com/typst/typst", "Typst"). Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").]
 )

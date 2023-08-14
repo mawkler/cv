@@ -128,7 +128,7 @@
 #let footer(content) = [
   #set align(center)
   #set text(6.5pt, fill: gray_color, font: code_font)
-  #show link: underline
+  #show link: body => underline(text(body, fill: secondary_color))
 
   #line(length: 100%, stroke: 0.5pt + gray_color)
   #fa-chevron-right() #content

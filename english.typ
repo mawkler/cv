@@ -102,5 +102,5 @@
 
     - Driver's license class B since 2015
   ],
-  [My CV was created using #link("https://github.com/typst/typst", "Typst"). If you're curious, its source code is available #link("https://github.com/mawkler/cv", "here").]
+  [This CV was written in the markup language #link("https://github.com/typst/typst", "Typst"). If you're curious, the source code is available at #link("https://github.com/mawkler/cv").]
 )
