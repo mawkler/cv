@@ -116,7 +116,7 @@
     fill: secondary_color,
     inset: 4pt,
     radius: 6pt,
-    text(weight: "bold", fill: white, font: sans_serif_font , content)
+    text(weight: "semibold", fill: white, font: sans_serif_font , content)
   )
 }
 

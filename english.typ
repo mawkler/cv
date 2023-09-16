@@ -73,7 +73,7 @@
     #skill("C/C++", 2)
     #skill("C#", 2)
     #skill("R", 1)
-    #skill("Typst", 2)
+    #skill("Typst", 3)
     #skill(LaTeX, 4)
 
     === Other technologies
