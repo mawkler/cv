@@ -87,6 +87,7 @@
     #skill("Jest", 5)
     #skill([Micro#{text(12pt, [#sym.ast.op #h(-3pt) #sym.ast.op])}ft Azure], 3)
     #skill("Serverless (Azure Functions)", 3)
+    #skill("Protobuf", 2)
 
     === Metodologier
 
