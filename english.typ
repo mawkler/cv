@@ -86,6 +86,7 @@
     #skill([Micro#{text(12pt, [#sym.ast.op #h(-3pt) #sym.ast.op])}ft Azure], 3)
     #skill("Serverless (Azure Functions)", 3)
     #skill("Protobuf", 2)
+    #skill("AWS", 2)
 
     === Methodologies
 
@@ -102,6 +103,7 @@
     == Other Merits
 
     - Driver's license class B since 2015
+    - #link("https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=3F3BD0A7985F84E97A12484A7942571EO261A52FED86F80D97C4722E03C3903D0", "AWS Certified Cloud Practitioner certificate")
   ],
   [This CV was written in the markup language #link("https://github.com/typst/typst", "Typst"). If you're curious, the source code is available at #link("https://github.com/mawkler/cv").]
 )

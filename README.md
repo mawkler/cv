@@ -29,7 +29,7 @@ Below you can download my CV as a PDF in either English or Swedish:
     </tr>
 </table>
 
-The PDFs are automatically built and deployed on each push using my GitHub Actions pipeline [here](./.github/workflows/build-cv.yaml).
+The PDFs (and these thumbnails) are automatically built and deployed on each push using my GitHub Actions pipeline [here](./.github/workflows/build-cv.yaml).
 
 ## Compile it yourself
 
