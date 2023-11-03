@@ -9,12 +9,11 @@
 
 #let contact_info(services) = {
   let glyph(icon) = {
-    box(baseline: 2.5pt, height: 11pt, text(icon))
+    box(baseline: 2.5pt, height: 11pt, text(icon, size: 10pt))
     h(3pt)
   }
 
-  set text(weight: "bold", font: code_font, fill: primary_color)
-  show link: it => text(size: 8pt, it.body)
+  set text(weight: "bold", font: code_font, fill: primary_color, size: 8pt)
 
   services.map(service => {
     glyph(service.icon)
@@ -129,6 +128,8 @@
   #set align(center)
   #set text(6.5pt, fill: gray_color, font: code_font)
 
+  #show link: body => underline(text(body, fill: secondary_color, weight: "bold"))
+
   #line(length: 100%, stroke: 0.5pt + gray_color)
   #fa-chevron-right() #content
 ]
@@ -138,7 +139,6 @@
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
 
-  show link: body => underline(text(body, fill: secondary_color))
   show heading.where(level: 2): it => text(fill: primary_color, [
     #v(5pt)
     #{it.body}
@@ -156,6 +156,9 @@
     columns: (1fr, 0.54fr),
     gutter: 15pt,
     left,
-    right,
+    {
+      show link: body => underline(text(body, fill: primary_color))
+      right
+    },
   )
 }
