@@ -104,8 +104,8 @@
 
     == Andra meriter
 
-    - B-körkort sedan 2015
     - #link("https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=3F3BD0A7985F84E97A12484A7942571EO261A52FED86F80D97C4722E03C3903D0", "AWS Certified Cloud Practitioner certificate")
+    - B-körkort sedan 2015
   ],
   [Det här CV:t är skrivet i markup-språket #link("https://github.com/typst/typst", "Typst"). Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").]
 )
