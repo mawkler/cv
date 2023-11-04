@@ -28,12 +28,15 @@
 
 #let header_info(name, links, tagline, image_path) = {
   set text(font: sans_serif_font)
+  let date = text(size: 8pt, weight: "regular", fill: gray_color, datetime.today().display())
   grid(
     columns: (6fr, 1fr),
     gutter: 15pt,
     align(start + horizon, {
       [= #name]
       tagline
+      v(-5pt)
+      date
       v(0pt)
       contact_info(links)
     }),
