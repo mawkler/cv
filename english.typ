@@ -17,6 +17,8 @@
 
     RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on domain-driven design, security and CI/CD. Several web-APIs were designed, deployed and maintained.
 
+    I have also worked with Java microservices for a veterinary clinic. The main focus was on DevOps and CI/CD. We wrote "functional Java", i.e. we primarily used `Optional`s, as well as `Either`s and `Stream`s from Vavr.
+
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
     My work as a summer intern during 2016 as well as 2017 involved building tools that simplify the management of radio  software databases, from scratch. During my first summer I worked mainly on a web client written in AngularJS. During my second summer I worked primarily with text parsing using Python. The work was done in an agile manner in teams of 2--5 people.
@@ -38,10 +40,6 @@
     #experience("images/wik.png")[Music programme][Wik's Folkhögskola][2014-2015][Uppsala]
 
     Music education with focus on musical variety and expression in song writing as well as live performance and music theory.
-
-    #experience("images/viktor-rydberg.png")[Natural Science Program with aesthetic orientation music][Viktor Rydberg Gymnasium Odenplan][2011-2014][Stockholm]
-
-    Natural science courses, music courses, as well as one in digital content creation.
 
     == Interests
 
