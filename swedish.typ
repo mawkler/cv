@@ -54,6 +54,7 @@
       "Verktyg/Tooling",
       "Musik",
       "Datorspel",
+      "Tangentbord",
       "Brädspel",
       "Klättring",
       "Snowboardåkning"
@@ -64,12 +65,12 @@
 
     === Språk
 
-    #skill("Rust", 3)
-    #skill("TypeScript", 5)
+    #skill("Rust", 4)
+    #skill("TypeScript/JavaScript", 5)
     #skill("Lua", 4)
     #skill("Python", 3)
-    #skill("Java", 3)
-    #skill("Haskell", 3)
+    #skill("Java", 4)
+    #skill("Haskell", 2)
     #skill("SQL", 3)
     #skill("HTML/CSS", 4)
     #skill("C/C++", 2)
@@ -80,21 +81,25 @@
 
     === Andra tekniker
 
-    #skill("Vim/Neovim", 5)
     #skill("Linux", 4)
+    #skill("Neovim/Vim", 5)
     #skill("Git", 5)
     #skill("OpenAPI/Swagger", 3)
     #skill("Jest", 5)
-    #skill([Micro#{text(12pt, [#sym.ast.op #h(-3pt) #sym.ast.op])}ft Azure], 3)
+    #skill([Microsoft Azure], 3)
     #skill("Serverless (Azure Functions)", 3)
     #skill("Protobuf", 2)
     #skill("AWS", 2)
+    #skill("Docker", 2)
+    #skill("Kubernetes", 2)
+    #skill("OAuth 2.0", 1)
 
     === Metodologier
 
     #skill("Domändriven Design", 4)
-    #skill("Agile", 3)
+    #skill("Agile", 4)
     #skill("REST", 4)
+    #skill("DevOps", 4)
 
     == Talade språk
 
