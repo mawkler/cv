@@ -26,7 +26,7 @@
   }).join(h(10pt))
 }
 
-#let header_info(name, links, tagline, image_path) = {
+#let header_info(name, links, occupation, tagline, image_path) = {
   set text(font: sans_serif_font)
   let date = text(size: 8pt, weight: "regular", fill: gray_color, datetime.today().display())
   grid(
@@ -34,9 +34,16 @@
     gutter: 15pt,
     align(start + horizon, {
       [= #name]
-      tagline
+      v(2pt)
+      {
+        show link: body => text(body, fill: primary_color)
+        occupation; [ -- ]; text(style: "italic", tagline)
+        // occupation; text(style: "italic", fill: gray_color, {[ -- ]; tagline})
+      }
+
       v(-5pt)
-      date
+      date // TODO: try moving date to contact_info
+
       v(0pt)
       contact_info(links)
     }),
@@ -137,7 +144,7 @@
   #fa-chevron-right() #content
 ]
 
-#let cv(name: "", links: (), tagline: [], left, right, footer_content) = {
+#let cv(name: "", links: (), occupation: "", tagline: [], left, right, footer_content) = {
   set text(9.8pt, font: "IBM Plex Sans")
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
@@ -151,7 +158,7 @@
   show heading.where(level: 4): it => text(fill: primary_color, it.body)
   show heading: it => text(font: sans_serif_font, it)
 
-  header_info(name, links, tagline, "images/profile.png")
+  header_info(name, links, occupation, tagline, "images/profile.png")
 
   v(-8pt)
 

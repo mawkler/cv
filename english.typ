@@ -9,7 +9,8 @@
     (link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler", icon: fa-mastodon()),
     (link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander", icon: fa-linkedin()),
   ),
-  tagline: [Software Engineer],
+  occupation: "Software Engineer",
+  tagline: [Looking for opportunities to work in Rust. Check out what I'm up to #link("https://github.com/mawkler/cv", "my GitHub").],
   [
     == Work Experience
 

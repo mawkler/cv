@@ -11,7 +11,8 @@
     (link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler", icon: fa-mastodon()),
     (link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander", icon: fa-linkedin()),
   ),
-  tagline: [Mjukvaruutvecklare],
+  occupation: "Mjukvaruutvecklare",
+  tagline: [Söker möjligheter att arbeta i Rust. Spana in vad jag har för mig på #link("https://github.com/mawkler", "min GitHub").],
   [
     == Arbetslivserfarenhet
 
