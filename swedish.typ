@@ -20,7 +20,7 @@
 
     RESTful back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumpstillverkare. Primärt fokus på domän-driven design, säkerhet och CI/CD. Ett flertal webb-API:er designades, produktionssattes och underhölls.
 
-    Jag har även jobbat med Java microservices för en veterinärklinik. Mycket fokus på DevOps och CI/CD. Vi skrev "funktionell Java", d.v.s. att vi primärt jobbade med `Optional`s, samt `Either`s och `Stream`s från Vavr.
+    Jag jobbar just nu med Java microservices i Kubernetes för en veterinärklinik. Mycket fokus på DevOps och CI/CD. Vi skriver "funktionell Java", d.v.s. att vi primärt jobbar med `Optional`s, samt `Either`s och `Stream`s från Vavr.
 
     #experience("images/ericsson.png")[Mjukvaruutvecklare][Ericsson][2016 --- 2017][Kista, Stockholm]
 
@@ -85,13 +85,14 @@
     #skill("Git", 5)
     #skill("OpenAPI/Swagger", 3)
     #skill("Jest", 5)
-    #skill([Microsoft Azure], 3)
+    #skill("Microsoft Azure", 3)
     #skill("Serverless (Azure Functions)", 3)
     #skill("Protobuf", 2)
     #skill("AWS", 2)
     #skill("Docker", 2)
     #skill("Kubernetes", 2)
     #skill("OAuth 2.0", 1)
+    #skill("Vavr", 2)
 
     === Metodologier
 
