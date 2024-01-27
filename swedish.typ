@@ -1,7 +1,7 @@
 #import "cv.typ": cv, experience, skill, LaTeX, bubble, list_interests
 #import "@preview/fontawesome:0.1.0": *
 
-// TODO: swedish hyphenation
+#set text(lang: "se")
 
 #cv(
   name: "Melker Ulander",
