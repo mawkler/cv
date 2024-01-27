@@ -144,7 +144,54 @@
   #fa-chevron-right() #content
 ]
 
-#let cv(name: "", links: (), occupation: "", tagline: [], left, right, footer_content) = {
+#let programming_skills(header, languages_header, other_technologies_header) = {
+  [== #header]
+
+  [=== #languages_header]
+
+  skill("Rust", 4)
+  skill("TypeScript/JavaScript", 5)
+  skill("Lua", 4)
+  skill("Python", 3)
+  skill("Java", 4)
+  skill("Haskell", 2)
+  skill("SQL", 3)
+  skill("HTML/CSS", 4)
+  skill("C/C++", 2)
+  skill("C#", 2)
+  skill("R", 1)
+  skill("Typst", 3)
+  skill(LaTeX, 4)
+
+  [=== #other_technologies_header]
+
+  skill("Linux", 4)
+  skill("Neovim/Vim", 5)
+  skill("Git", 5)
+  skill("OpenAPI/Swagger", 3)
+  skill("Jest", 5)
+  skill("Microsoft Azure", 3)
+  skill("Serverless (Azure Functions)", 3)
+  skill("Protobuf", 2)
+  skill("AWS", 2)
+  skill("Docker", 2)
+  skill("Kubernetes", 2)
+  skill("OAuth 2.0", 1)
+  skill("Vavr", 2)
+}
+
+#let cv(
+  name: "",
+  links: (),
+  occupation: "",
+  tagline: [],
+  left_column: [],
+  right_column_header: "",
+  languages_header: "",
+  other_technologies_header: "",
+  right_column: [],
+  footer_content: []
+) = {
   set text(9.8pt, font: "IBM Plex Sans")
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
@@ -165,10 +212,11 @@
   grid(
     columns: (1fr, 0.54fr),
     gutter: 15pt,
-    left,
+    left_column,
     {
       show link: body => underline(text(body, fill: primary_color))
-      right
+      programming_skills(right_column_header, languages_header, other_technologies_header)
+      right_column
     },
   )
 }

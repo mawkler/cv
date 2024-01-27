@@ -1,4 +1,4 @@
-#import "cv.typ": cv, experience, skill, LaTeX, bubble, list_interests
+#import "cv.typ": cv, experience, skill, list_interests
 #import "@preview/fontawesome:0.1.0": *
 
 #cv(
@@ -11,7 +11,7 @@
   ),
   occupation: "Software Engineer",
   tagline: [Looking for opportunities to work in Rust. Check out what I'm up to #link("https://github.com/mawkler/cv", "my GitHub").],
-  [
+  left_column: [
     == Work Experience
 
     #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
@@ -57,41 +57,10 @@
       "Snowboarding"
     ))
   ],
-  [
-    == Programming Skills
-
-    === Languages
-
-    #skill("Rust", 4)
-    #skill("TypeScript/JavaScript", 5)
-    #skill("Lua", 4)
-    #skill("Python", 3)
-    #skill("Java", 4)
-    #skill("Haskell", 2)
-    #skill("SQL", 3)
-    #skill("HTML/CSS", 4)
-    #skill("C/C++", 2)
-    #skill("C#", 2)
-    #skill("R", 1)
-    #skill("Typst", 3)
-    #skill(LaTeX, 4)
-
-    === Other technologies
-
-    #skill("Linux", 4)
-    #skill("Neovim/Vim", 5)
-    #skill("Git", 5)
-    #skill("OpenAPI/Swagger", 3)
-    #skill("Jest", 5)
-    #skill("Microsoft Azure", 3)
-    #skill("Serverless (Azure Functions)", 3)
-    #skill("Protobuf", 2)
-    #skill("AWS", 2)
-    #skill("Docker", 2)
-    #skill("Kubernetes", 2)
-    #skill("OAuth 2.0", 1)
-    #skill("Vavr", 2)
-
+  right_column_header: "Programming Skills",
+  languages_header: "Languages",
+  other_technologies_header: "Other Technologies",
+  right_column: [
     === Methodologies
 
     #skill("Domain-Driven Design", 4)
@@ -110,5 +79,5 @@
     - #link("https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=3F3BD0A7985F84E97A12484A7942571EO261A52FED86F80D97C4722E03C3903D0", "AWS Certified Cloud Practitioner certificate")
     - Driver's license class B since 2015
   ],
-  [My CV is open-source. If you're curious, its source code is available at #link("https://github.com/mawkler/cv").]
+  footer_content: [My CV is open-source. If you're curious, its source code is available at #link("https://github.com/mawkler/cv").]
 )

@@ -13,7 +13,7 @@
   ),
   occupation: "Mjukvaruutvecklare",
   tagline: [Söker möjligheter att arbeta i Rust. Spana in vad jag har för mig på #link("https://github.com/mawkler", "min GitHub").],
-  [
+  left_column: [
     == Arbetslivserfarenhet
 
     #experience("images/omegapoint.png")[Mjukvaruutvecklarkonsult][Omegapoint][2021 --- nuvarande][Stockholm]
@@ -59,41 +59,10 @@
       "Snowboardåkning"
     ))
   ],
-  [
-    == Programmeringsfärdigheter
-
-    === Språk
-
-    #skill("Rust", 4)
-    #skill("TypeScript/JavaScript", 5)
-    #skill("Lua", 4)
-    #skill("Python", 3)
-    #skill("Java", 4)
-    #skill("Haskell", 2)
-    #skill("SQL", 3)
-    #skill("HTML/CSS", 4)
-    #skill("C/C++", 2)
-    #skill("C#", 2)
-    #skill("R", 1)
-    #skill("Typst", 3)
-    #skill(LaTeX, 4)
-
-    === Andra tekniker
-
-    #skill("Linux", 4)
-    #skill("Neovim/Vim", 5)
-    #skill("Git", 5)
-    #skill("OpenAPI/Swagger", 3)
-    #skill("Jest", 5)
-    #skill("Microsoft Azure", 3)
-    #skill("Serverless (Azure Functions)", 3)
-    #skill("Protobuf", 2)
-    #skill("AWS", 2)
-    #skill("Docker", 2)
-    #skill("Kubernetes", 2)
-    #skill("OAuth 2.0", 1)
-    #skill("Vavr", 2)
-
+  right_column_header: "Programmeringsfärdigheter",
+  languages_header: "Språk",
+  other_technologies_header: "Andra tekniker",
+  right_column: [
     === Metodologier
 
     #skill("Domändriven Design", 4)
@@ -112,5 +81,5 @@
     - #link("https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=3F3BD0A7985F84E97A12484A7942571EO261A52FED86F80D97C4722E03C3903D0", "AWS Certified Cloud Practitioner certificate")
     - B-körkort sedan 2015
   ],
-  [Mitt CV är open-source. Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").]
+  footer_content: [Mitt CV är open-source. Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").]
 )
