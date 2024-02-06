@@ -1,4 +1,4 @@
-# My CV
+# CV
 
 Below you can download my CV as a PDF in either English or Swedish:
 
