@@ -11,6 +11,7 @@
   ),
   occupation: "Software Engineer",
   tagline: [Looking for opportunities to work in Rust. Check out what I'm up to #link("https://github.com/mawkler/cv", "my GitHub").],
+  compiled_date: [Compiled: #datetime.today().display()],
   left_column: [
     == Work Experience
 

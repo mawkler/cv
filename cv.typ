@@ -26,9 +26,9 @@
   }).join(h(10pt))
 }
 
-#let header_info(name, links, occupation, tagline, image_path) = {
+#let header_info(name, links, occupation, tagline, image_path, compiled_date) = {
   set text(font: sans_serif_font)
-  let date = text(size: 8pt, weight: "regular", fill: gray_color, [Compiled: #datetime.today().display()])
+  let date = text(size: 8pt, weight: "regular", fill: gray_color, compiled_date)
   grid(
     columns: (6fr, 1fr),
     gutter: 15pt,
@@ -186,6 +186,7 @@
   links: (),
   occupation: "",
   tagline: [],
+  compiled_date: "",
   left_column: [],
   right_column_header: "",
   languages_header: "",
@@ -206,7 +207,7 @@
   show heading.where(level: 4): it => text(fill: primary_color, it.body)
   show heading: it => text(font: sans_serif_font, it)
 
-  header_info(name, links, occupation, tagline, "images/profile.png")
+  header_info(name, links, occupation, tagline, "images/profile.png", compiled_date)
 
   v(-8pt)
 

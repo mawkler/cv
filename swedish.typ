@@ -13,6 +13,7 @@
   ),
   occupation: "Mjukvaruutvecklare",
   tagline: [Söker möjligheter att arbeta i Rust. Spana in vad jag har för mig på #link("https://github.com/mawkler", "min GitHub").],
+  compiled_date: [Kompilerad: #datetime.today().display()],
   left_column: [
     == Arbetslivserfarenhet
 
