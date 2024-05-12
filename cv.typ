@@ -28,7 +28,7 @@
 
 #let header_info(name, links, occupation, tagline, image_path) = {
   set text(font: sans_serif_font)
-  let date = text(size: 8pt, weight: "regular", fill: gray_color, datetime.today().display())
+  let date = text(size: 8pt, weight: "regular", fill: gray_color, [Compiled: #datetime.today().display()])
   grid(
     columns: (6fr, 1fr),
     gutter: 15pt,
@@ -150,12 +150,13 @@
   [=== #languages_header]
 
   skill("Rust", 4)
+  skill("Go", 2)
   skill("TypeScript/JavaScript", 5)
   skill("Lua", 4)
   skill("Python", 3)
   skill("Java", 4)
   skill("Haskell", 2)
-  skill("SQL", 3)
+  skill("SQL", 2)
   skill("HTML/CSS", 4)
   skill("C/C++", 2)
   skill("C#", 2)

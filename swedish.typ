@@ -18,21 +18,23 @@
 
     #experience("images/omegapoint.png")[Mjukvaruutvecklarkonsult][Omegapoint][2021 --- nuvarande][Stockholm]
 
-    RESTful back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumpstillverkare. Primärt fokus på domän-driven design, säkerhet och CI/CD. Ett flertal webb-API:er designades, produktionssattes och underhölls.
+    De här konsultuppdragen har jag haft hittils:
 
-    Jag jobbar just nu med Java microservices i Kubernetes för en veterinärklinik. Mycket fokus på DevOps och CI/CD. Vi skriver "funktionell Java", d.v.s. att vi primärt jobbar med `Optional`s, samt `Either`s och `Stream`s från Vavr.
+    - RESTfull back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumpstillverkare. Primärt fokus på DDD, säkerhet och CI/CD.
+    - Java microservices i Kubernetes för en veterinärklinik. Fokus på DevOps och CI/CD, samt "funktionell Java".
+    - RESTfull back-end-utveckling i Go och Azure/Kubernetes för ett energiföretag. Bicep IaC, CI/CD.
 
     #experience("images/ericsson.png")[Mjukvaruutvecklare][Ericsson][2016 --- 2017][Kista, Stockholm]
 
     Under mitt jobb på Ericssons internship under sommar 2016 och 2017 byggde jag verktyg som förenklar hanteringen av databaser för radiomjukvara. Under den första sommaren arbetade jag primärt på en webb-klient skriven i AngularJS. Under den andra sommaren arbetade jag i första hand med text-parsning i Python. Arbetet gjordes agilt i team på 2--5 personer.
 
-    #experience("images/hello-world.png")[Programmings- och CAD teacher][Hello World!][2018][Stockholm]
+    #experience("images/hello-world.png")[Programmings- och CAD-lärare][Hello World!][2018][Stockholm]
 
-    Hello World! är en ideell förening som lär ut digitala färdigheter till barn och ungdomar. Jag lärde bland annat ut CAD och 3D-printing, programmering av mikrokontrollers som exempelvis Arduinos i Python, samt programmering i språket Lua. Mitt jobb på Hello World! har stärkt både mina ledar- och pedagogiska färdigheter. Det har också bekräftat för mig hur mycket jag tycker om att lära ut.
+    Hello World! är en ideell förening som lär ut digitala färdigheter till barn och ungdomar. Jag lärde bland annat ut programmering av mikrokontrollers som exempelvis Arduinos i Python, programmering i språket Lua samt CAD och 3D-printing. Mitt jobb på Hello World! har stärkt både mina ledar- och pedagogiska färdigheter. Det har också bekräftat för mig hur mycket jag tycker om att lära ut.
 
-    #experience("images/uppsala.png")[Labbhandledare inom datavetenskap][Uppsala Universitet][2017, 2019][Uppsala]
+    #experience("images/uppsala.png")[Labbhandledare i datavetenskap][Uppsala Universitet][2017, 2019][Uppsala]
 
-    Som labbhandledare assisterade jag studenter under laborationer i kursen Programkonstruktion och Datastrukturer. Labbarna bestod av många praktiska moment så som problemlösning i form av programmering i Haskell, beräkning av tidskomplexitet, induktionsbevis, mm. Som handledare har jag fått stärka min förmåga i pedagogik och undervisning.
+    Jag assisterade studenter under laborationer i kursen Programkonstruktion och Datastrukturer. Labbarna bestod av många praktiska moment så som problemlösning i form av programmering i Haskell, beräkning av tidskomplexitet, induktionsbevis, mm. Som handledare har jag fått stärka min förmåga i pedagogik och undervisning.
 
     == Utbildning
 

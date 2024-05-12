@@ -16,9 +16,11 @@
 
     #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
 
-    RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on domain-driven design, security and CI/CD. Several web-APIs were designed, deployed and maintained.
+    These are the consulting assignments I've worked on so far:
 
-    I currently work with Java microservices in Kubernetes for a veterinary clinic. The main focus is on DevOps and CI/CD. We write "functional Java", i.e. we primarily use `Optional`s, as well as `Either`s and `Stream`s from Vavr.
+    - RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on DDD, security and CI/CD.
+    - Java microservices in Kubernetes for a veterinary clinic. Main focus on DevOps and CI/CD, as well as "functional Java".
+    - RESTful Go back-end development in Azure/Kubernetes for an energy company. Bicep IaC, CI/CD.
 
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
@@ -26,7 +28,7 @@
 
     #experience("images/hello-world.png")[Programming and CAD teacher][Hello World!][2018][Stockholm]
 
-    Hello World! is a Swedish non-profit association that teaches kids and teenagers digital skills. I taught CAD and 3D-printing, programming of microcontrollers such as Arduinos using Python, as well as Lua programming. My work at Hello World! improved both my pedagogical and leadership skills. It also confirmed to me how much I love teaching.
+    Hello World! is a Swedish non-profit association that teaches kids and teenagers digital skills. I taught programming of microcontrollers such as Arduinos using Python, CAD and 3D-printing, as well as Lua programming. My work at Hello World! improved both my pedagogical and leadership skills. It also confirmed to me how much I love teaching.
 
     #experience("images/uppsala.png")[Computer science lab teacher][Uppsala University][2017, 2019][Uppsala]
 
