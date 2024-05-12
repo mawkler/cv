@@ -33,7 +33,13 @@ The PDFs (and these thumbnails) are automatically built and deployed on each pus
 
 ## Compile it yourself
 
-Requires [Typst](https://github.com/typst/typst) to be installed, as well as the fonts [Fira Sans](https://github.com/mozilla/Fira), [Fira Code](https://github.com/tonsky/FiraCode) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
+Requires [Typst](https://github.com/typst/typst) to be installed, as well as the fonts [Fira Sans](https://github.com/mozilla/Fira), [Fira Code](https://github.com/tonsky/FiraCode) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). If you're on Arch Linux (btw) you can install these like so:
+
+```sh
+sudo pacman -S typst ttf-fira-code ttf-fira-sans ttf-font-awesome
+```
+
+Here's how you compile the CV:
 
 ```sh
 git clone https://github.com/mawkler/cv.git
