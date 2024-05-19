@@ -1,4 +1,4 @@
-#import "cv.typ": cv, experience, skill, LaTeX, bubble, list_interests
+#import "cv.typ": cv, experience, skill, list_interests
 #import "@preview/fontawesome:0.1.0": *
 
 #set text(lang: "se")
@@ -27,7 +27,7 @@
 
     #experience("images/ericsson.png")[Mjukvaruutvecklare][Ericsson][2016 --- 2017][Kista, Stockholm]
 
-    Under mitt jobb på Ericssons internship under sommar 2016 och 2017 byggde jag verktyg som förenklar hanteringen av databaser för radiomjukvara. Under den första sommaren arbetade jag primärt på en webb-klient skriven i AngularJS. Under den andra sommaren arbetade jag i första hand med text-parsning i Python. Arbetet gjordes agilt i team på 2--5 personer.
+    Under mitt jobb på Ericssons internship under sommar 2016 och 2017 byggde jag verktyg som förenklar hanteringen av databaser för radiomjukvara. Under den första sommaren arbetade jag primärt på en webb-klient skriven i Angular. Under den andra sommaren arbetade jag med text-parsning och byggde en webb-server i Python. Arbetet gjordes agilt i team på 2--5 personer.
 
     #experience("images/hello-world.png")[Programmings- och CAD-lärare][Hello World!][2018][Stockholm]
 

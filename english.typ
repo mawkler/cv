@@ -25,7 +25,7 @@
 
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
-    My work as a summer intern during 2016 as well as 2017 involved building tools that simplify the management of radio  software databases, from scratch. During my first summer I worked mainly on a web client written in AngularJS. During my second summer I worked primarily with text parsing using Python. The work was done in an agile manner in teams of 2--5 people.
+    My work as a summer intern during 2016 as well as 2017 involved building tools that simplify the management of radio  software databases. During my first summer I worked mainly on a web client written in Angular. During my second summer I worked with text parsing and building a web-server in Python. The work was done in an agile manner in teams of 2--5 people.
 
     #experience("images/hello-world.png")[Programming and CAD teacher][Hello World!][2018][Stockholm]
 
