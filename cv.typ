@@ -178,6 +178,7 @@
   skill("Docker", 2)
   skill("Kubernetes", 2)
   skill("OAuth 2.0", 1)
+  skill("HTMX", 1)
   skill("Vavr", 2)
 }
 
