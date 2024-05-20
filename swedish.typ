@@ -81,7 +81,7 @@
 
     == Andra meriter
 
-    - #link("https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=3F3BD0A7985F84E97A12484A7942571EO261A52FED86F80D97C4722E03C3903D0", "AWS Certified Cloud Practitioner certificate")
+    - AWS Certified Cloud Practitioner certificate
     - B-körkort sedan 2015
   ],
   footer_content: [Mitt CV är open-source. Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").]

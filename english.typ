@@ -79,7 +79,7 @@
 
     == Other Merits
 
-    - #link("https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=3F3BD0A7985F84E97A12484A7942571EO261A52FED86F80D97C4722E03C3903D0", "AWS Certified Cloud Practitioner certificate")
+    - AWS Certified Cloud Practitioner certificate
     - Driver's license class B since 2015
   ],
   footer_content: [My CV is open-source. If you're curious, its source code is available at #link("https://github.com/mawkler/cv").]
