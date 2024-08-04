@@ -57,6 +57,7 @@
       "Keyboards",
       "Board games",
       "Climbing",
+      "Archery",
       "Snowboarding"
     ))
   ],

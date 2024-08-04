@@ -59,6 +59,7 @@
       "Tangentbord",
       "Brädspel",
       "Klättring",
+      "Bågskytte",
       "Snowboardåkning"
     ))
   ],
