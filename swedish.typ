@@ -21,9 +21,9 @@
 
     De här konsultuppdragen har jag haft hittils:
 
-    - RESTfull back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumpstillverkare. Primärt fokus på DDD, säkerhet och CI/CD.
-    - Java microservices i Kubernetes för en veterinärklinik. Fokus på DevOps och CI/CD, samt "funktionell Java".
     - RESTfull back-end-utveckling i Go och Azure/Kubernetes för ett energiföretag. Bicep IaC, CI/CD.
+    - Java microservices i Kubernetes för en veterinärklinik. Fokus på DevOps och CI/CD, samt "funktionell Java".
+    - RESTfull back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumpstillverkare. Primärt fokus på DDD, säkerhet och CI/CD.
 
     #experience("images/ericsson.png")[Mjukvaruutvecklare][Ericsson][2016 --- 2017][Kista, Stockholm]
 

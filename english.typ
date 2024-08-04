@@ -19,9 +19,9 @@
 
     These are the consulting assignments I've worked on so far:
 
-    - RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on DDD, security and CI/CD.
-    - Java microservices in Kubernetes for a veterinary clinic. Main focus on DevOps and CI/CD, as well as "functional Java".
     - RESTful Go back-end development in Azure/Kubernetes for an energy company. Bicep IaC, CI/CD.
+    - Java microservices in Kubernetes for a veterinary clinic. Main focus on DevOps and CI/CD, as well as "functional Java".
+    - RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on DDD, security and CI/CD.
 
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
