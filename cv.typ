@@ -150,7 +150,7 @@
   [=== #languages_header]
 
   skill("Rust", 4)
-  skill("Go", 2)
+  skill("Go", 3)
   skill("TypeScript/JavaScript", 5)
   skill("Lua", 4)
   skill("Python", 3)
