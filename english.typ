@@ -10,22 +10,24 @@
     (link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander", icon: fa-linkedin()),
   ),
   occupation: "Software Engineer",
-  tagline: [Looking for opportunities to work in Rust. Check out what I'm up to #link("https://github.com/mawkler/cv", "my GitHub").],
+  tagline: [Looking for opportunities to work in Rust. Check out what I'm up to on #link("https://github.com/mawkler/cv", "my GitHub").],
   compiled_date: [Compiled: #datetime.today().display()],
   left_column: [
     == Work Experience
 
     #experience("images/omegapoint.png")[Software engineering consultant][Omegapoint][2021 --- present][Stockholm]
 
-    These are the consulting assignments I've worked on so far:
+    These are the assignments I've worked on so far:
 
-    - RESTful Go back-end development in Azure/Kubernetes for an energy company. Bicep IaC, CI/CD.
+    - Rust command-line interface for managing time sheets. Check it out here: #link("https://github.com/mawkler/maconomy-cli", "maconomy-cli").
+    - RESTful Go back-end development in Azure/Kubernetes for an energy company. Focus was on IaC in Bicep, and CI/CD.
+    - Full stack Elixir/Phoenix LiveView for an information security management product.
     - Java microservices in Kubernetes for a veterinary clinic. Main focus on DevOps and CI/CD, as well as "functional Java".
-    - RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on DDD, security and CI/CD.
+    - RESTful back-end development with Azure Functions in TypeScript/Node for a heat-pump manufacturer. Primary focus on DDD, security, unit and integration testing, and CI/CD.
 
     #experience("images/ericsson.png")[Software developer][Ericsson][2016 --- 2017][Kista, Stockholm]
 
-    My work as a summer intern during 2016 as well as 2017 involved building tools that simplify the management of radio  software databases. During my first summer I worked mainly on a web client written in Angular. During my second summer I worked with text parsing and building a web-server in Python. The work was done in an agile manner in teams of 2--5 people.
+    My internship involved building tools that simplify the management of radio software databases. During my first summer I worked mainly on a web client written in Angular. During my second summer I worked with text parsing and building a web-server in Python. The work was done in an agile manner in teams of 2--5 people.
 
     #experience("images/hello-world.png")[Programming and CAD teacher][Hello World!][2018][Stockholm]
 
@@ -37,7 +39,7 @@
 
     == Education
 
-    #experience("images/uppsala.png")[Master Programme in Computer and Information Engineering, 300 c --- Software Engineering Specialization][Uppsala University][2015-2021][Uppsala]
+    #experience("images/uppsala.png")[Master Programme in Computer and Information Engineering, \ 300 c --- Software Engineering Specialization][Uppsala University][2015-2021][Uppsala]
 
     Programming, mathematics and problem solving are three basic building blocks of the programme. For instance, I gained experience working in cross-functional teams, creating software requirements as well as product development in an agile manner.
 
@@ -67,7 +69,7 @@
   right_column: [
     === Methodologies
 
-    #skill("Domain-Driven Design", 4)
+    #skill("DDD", 4)
     #skill("Agile", 4)
     #skill("REST", 4)
     #skill("DevOps", 4)

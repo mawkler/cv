@@ -39,7 +39,6 @@
       {
         show link: body => text(body, fill: primary_color)
         occupation; [ -- ]; text(style: "italic", tagline)
-        // occupation; text(style: "italic", fill: gray_color, {[ -- ]; tagline})
       }
 
       v(-5pt)
@@ -145,12 +144,12 @@
   skill("Lua", 4)
   skill("Python", 3)
   skill("Java", 4)
+  skill("Elixir", 2)
   skill("Haskell", 2)
   skill("SQL", 2)
   skill("HTML/CSS", 4)
   skill("C/C++", 2)
   skill("C#", 2)
-  skill("R", 1)
   skill("Typst", 3)
   skill(LaTeX, 4)
 
@@ -162,14 +161,14 @@
   skill("OpenAPI/Swagger", 3)
   skill("Jest", 5)
   skill("Microsoft Azure", 3)
-  skill("Serverless (Azure Functions)", 3)
+  skill("Serverless", 3)
   skill("Protobuf", 2)
   skill("AWS", 2)
   skill("Docker", 2)
   skill("Kubernetes", 2)
   skill("OAuth 2.0", 1)
   skill("HTMX", 1)
-  skill("Vavr", 2)
+  skill("Phoenix", 2)
 }
 
 #let cv(
@@ -185,7 +184,7 @@
   right_column: [],
   footer_content: []
 ) = {
-  set text(9.8pt, font: "IBM Plex Sans")
+  set text(9.8pt)
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
   set par(justify: true)
 
@@ -203,9 +202,12 @@
   v(-8pt)
 
   grid(
-    columns: (1fr, 0.54fr),
+    columns: (1fr, 0.40fr),
     gutter: 15pt,
-    left_column,
+    {
+      show link: body => underline(text(body, fill: secondary_color))
+      left_column
+    },
     {
       show link: body => underline(text(body, fill: primary_color))
       programming_skills(right_column_header, languages_header, other_technologies_header)
