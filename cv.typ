@@ -107,7 +107,7 @@
     box(circle(radius: 4pt, fill: color))
   }).join(h(4pt))
 
-  name; h(1fr); circles; [\ ]
+  name; h(1fr); text(baseline: 1.3pt)[#circles]; [\ ]
 }
 
 #let bubble(content) = {
