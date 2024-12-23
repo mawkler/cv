@@ -1,4 +1,5 @@
 #import "@preview/fontawesome:0.1.0": *
+#import "@preview/metalogo:1.1.0": LaTeX
 
 #let primary_color = rgb("#2b4277") // darker blue
 #let secondary_color = rgb("#677fb2") // lighter blue
@@ -108,17 +109,6 @@
 
   name; h(1fr); circles; [\ ]
 }
-
-// Produces the LaTeX symbol
-#let LaTeX = style(styles => {
-  set text(font: "Times New Roman") // TODO: look up actual name
-  let l = measure(text(1em, "L"), styles)
-  let a = measure(text(0.7em, "A"), styles)
-  let A = text(0.7em, baseline: a.height - l.height, "A")
-  let e = measure(text(1em, "E"), styles)
-  let E = text(1em, baseline: e.height / 4, "E")
-  box("L" + h(-0.3em) + A + h(-0.1em) + "T" + h(-0.1em) + E + h(-0.125em) + "X")
-})
 
 #let bubble(content) = {
   box(
