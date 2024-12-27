@@ -25,7 +25,7 @@
     - RESTfull back-end-utveckling i Go och Azure/Kubernetes för ett energiföretag. Fokus var på DevOps i form av IaC i Bicep, och CI/CD.
     - Full-stack Elixir/Phoenix LiveView för ledningssystem för informationssäkerhet.
     - Java microservices i Kubernetes för en veterinärklinik. Fokus på DevOps och CI/CD, samt "funktionell Java".
-    - RESTfull back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumpstillverkare. Primärt fokus på DDD, säkerhet, testning och CI/CD.
+    - RESTfull back-end-utveckling med Azure Functions i TypeScript/Node för en värmepumps-tillverkare. Primärt fokus på DDD, säkerhet, testning och CI/CD.
 
     #experience("images/ericsson.png")[Mjukvaruutvecklare][Ericsson][2016 --- 2017][Kista, Stockholm]
 
