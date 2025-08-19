@@ -28,7 +28,7 @@ jobs:
             english.typ
             swedish.typ
       - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: English and Swedish PDFs
           path: |
