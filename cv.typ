@@ -1,5 +1,5 @@
-#import "@preview/fontawesome:0.1.0": *
-#import "@preview/metalogo:1.1.0": LaTeX
+#import "@preview/fontawesome:0.6.0": fa-calendar, fa-chevron-right, fa-location-dot
+#import "@preview/metalogo:1.2.0": LaTeX
 
 #let primary_color = rgb("#2b4277") // darker blue
 #let secondary_color = rgb("#677fb2") // lighter blue
@@ -16,15 +16,17 @@
 
   set text(weight: "bold", font: code_font, fill: primary_color, size: 8pt)
 
-  services.map(service => {
-    glyph(service.icon)
+  services
+    .map(service => {
+      glyph(service.icon)
 
-    if "display" in service.keys() {
-      link(service.link, service.display)
-    } else {
-      link(service.link)
-    }
-  }).join(h(10pt))
+      if "display" in service.keys() {
+        link(service.link, service.display)
+      } else {
+        link(service.link)
+      }
+    })
+    .join(h(10pt))
 }
 
 #let header_info(name, links, occupation, tagline, image_path, compiled_date) = {
@@ -38,7 +40,9 @@
       v(2pt)
       {
         show link: body => text(body, fill: primary_color)
-        occupation; [ -- ]; text(style: "italic", tagline)
+        occupation
+        [ -- ]
+        text(style: "italic", tagline)
       }
 
       v(-5pt)
@@ -47,66 +51,77 @@
       v(0pt)
       contact_info(links)
     }),
-    align(end + horizon, image(image_path, height: 8%))
+    align(end + horizon, image(image_path, height: 8%)),
   )
 }
 
 #let experience(image_path, name, company_name, period, location) = {
-  set table( inset: 0pt, stroke: none)
-  set align(horizon)
+  set table(inset: 0pt, stroke: none)
   set text(font: sans_serif_font)
-  let row_spacing = 4pt
+  set align(horizon)
+  let row_spacing = 2pt
   let right_text_font_size = 9pt
 
+  let right_column(..content) = {
+    set align(right)
+    set text(right_text_font_size, weight: "light")
+
+    text(..content)
+  }
+
   v(5pt)
+
+  show table.cell: it => {
+    set text(size: 10pt)
+    pad(bottom: 2pt, it)
+  }
 
   table(
     columns: (20pt, 1fr),
     column-gutter: 5pt,
-    image(image_path),
+    {
+      set align(horizon)
+      image(image_path)
+    },
     table(
       columns: (1fr, auto),
-      {
-        set par(justify: false)
+      text(weight: "bold", name),
+      right_column({
+        period
+        h(3pt)
+        text(fill: secondary_color, fa-calendar(10pt, solid: true))
+      }),
 
-        text(weight: "bold", name)
-      },
-      {
-        set align(right + bottom)
-        set text(right_text_font_size, weight: "light")
-
-        period; h(3pt); text(fill: secondary_color, fa-calendar(10pt))
-      },
-      {
-        v(row_spacing)
-        text(style: "italic", company_name)
-      },
-      {
-        set text(right_text_font_size, weight: "light")
-        set align(right)
-
-        v(row_spacing)
-        location; h(3pt); text(fill: secondary_color, fa-location-dot(10pt))
-      },
-    )
+      text(style: "italic", company_name),
+      right_column({
+        location
+        h(3pt)
+        text(fill: secondary_color, fa-location-dot())
+      }),
+    ),
   )
 
-  v(-5pt)
+  v(-9pt)
 }
 
 #let skill(name, rating) = {
   let max_rating = 5
 
-  let circles = range(0, max_rating).map(i => {
-    let color = secondary_color
-    if i >= rating {
-      color = rgb("#c0c0c0") // gray
-    }
+  let circles = range(0, max_rating)
+    .map(i => {
+      let color = secondary_color
+      if i >= rating {
+        color = rgb("#c0c0c0") // gray
+      }
 
-    box(circle(radius: 4pt, fill: color))
-  }).join(h(4pt))
+      box(circle(radius: 4pt, fill: color))
+    })
+    .join(h(4pt))
 
-  name; h(1fr); text(baseline: 1.3pt)[#circles]; [\ ]
+  name
+  h(1fr)
+  text(baseline: 1.3pt)[#circles]
+  [\ ]
 }
 
 #let bubble(content) = {
@@ -114,7 +129,7 @@
     fill: secondary_color,
     inset: 4pt,
     radius: 6pt,
-    text(weight: "semibold", fill: white, font: sans_serif_font , content)
+    text(weight: "semibold", fill: white, font: sans_serif_font, content),
   )
 }
 
@@ -182,7 +197,7 @@
   languages_header: "",
   other_technologies_header: "",
   right_column: [],
-  footer_content: []
+  footer_content: [],
 ) = {
   set text(9.8pt)
   set page(margin: (x: 32pt, y: 35pt), footer: footer(footer_content))
@@ -190,7 +205,7 @@
 
   show heading.where(level: 2): it => text(fill: primary_color, [
     #v(5pt)
-    #{it.body}
+    #{ it.body }
     #v(-7pt)
     #line(length: 100%, stroke: 1pt + primary_color)
   ])

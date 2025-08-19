@@ -1,5 +1,5 @@
-#import "cv.typ": cv, experience, skill, list_interests
-#import "@preview/fontawesome:0.1.0": *
+#import "cv.typ": cv, experience, list_interests, skill
+#import "@preview/fontawesome:0.6.0": *
 
 #cv(
   name: "Melker Ulander",
@@ -39,7 +39,9 @@
 
     == Education
 
-    #experience("images/uppsala.png")[Master Programme in Computer and Information Engineering, \ 300 c --- Software Engineering Specialization][Uppsala University][2015-2021][Uppsala]
+    #experience(
+      "images/uppsala.png",
+    )[Master Programme in Computer and Information Engineering, \ 300 c --- Software Engineering Specialization][Uppsala University][2015-2021][Uppsala]
 
     Programming, mathematics and problem solving are three basic building blocks of the programme. For instance, I gained experience working in cross-functional teams, creating software requirements as well as product development in an agile manner.
 
@@ -60,7 +62,7 @@
       "Board games",
       "Climbing",
       "Archery",
-      "Snowboarding"
+      "Snowboarding",
     ))
   ],
   right_column_header: "Programming Skills",
@@ -85,5 +87,5 @@
     - AWS Certified Cloud Practitioner certificate
     - Driver's license class B since 2015
   ],
-  footer_content: [My CV is open-source. If you're curious, its source code is available at #link("https://github.com/mawkler/cv").]
+  footer_content: [My CV is open-source. If you're curious, its source code is available at #link("https://github.com/mawkler/cv").],
 )

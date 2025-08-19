@@ -1,12 +1,12 @@
-#import "cv.typ": cv, experience, skill, list_interests
-#import "@preview/fontawesome:0.1.0": *
+#import "cv.typ": cv, experience, list_interests, skill
+#import "@preview/fontawesome:0.6.0": *
 
 #set text(lang: "se")
 
 #cv(
   name: "Melker Ulander",
   links: (
-    (link: "mailto:melker.ulander@pm.me", icon: fa-at()),
+    (link: "mailto:melker.ulander@pm.me", icon: fa-at(solid: true)),
     (link: "https://github.com/mawkler", display: "mawkler", icon: fa-github()),
     (link: "https://fosstodon.org/@mawkler", display: "fosstodon.org/@mawkler", icon: fa-mastodon()),
     (link: "https://linkedin.com/in/melker-ulander/", display: "Melker Ulander", icon: fa-linkedin()),
@@ -41,7 +41,9 @@
 
     == Utbildning
 
-    #experience("images/uppsala.png")[Civilingenjörsexamen i Informationsteknologi, 300 hp --- inriktning mjukvaruutveckling][Uppsala Universitet][2015-2021][Uppsala]
+    #experience(
+      "images/uppsala.png",
+    )[Civilingenjörsexamen i Informationsteknologi, 300 hp --- \ inriktning mjukvaruutveckling][Uppsala Universitet][2015-2021][Uppsala]
 
     Programmering, matematik och människor är tre viktiga grundstenar i programmet. Jag har bland mycket annat lärt mig kring arbete i tvärfunktionella (cross-functional) teams, ta fram mjukvarukrav samt agil produktutveckling.
 
@@ -62,7 +64,7 @@
       "Brädspel",
       "Klättring",
       "Bågskytte",
-      "Snowboardåkning"
+      "Snowboardåkning",
     ))
   ],
   right_column_header: "Programmeringsfärdigheter",
@@ -87,5 +89,5 @@
     - AWS Certified Cloud Practitioner certificate
     - B-körkort sedan 2015
   ],
-  footer_content: [Mitt CV är open-source. Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").]
+  footer_content: [Mitt CV är open-source. Om du är nyfiken så finns källkoden på #link("https://github.com/mawkler/cv").],
 )
