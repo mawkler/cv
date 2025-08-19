@@ -1,7 +1,7 @@
 name: Build CV
 on:
   push:
-    branches: [main]
+    branches: [main, test]
 jobs:
   build_typst_pdf:
     runs-on: ubuntu-latest
