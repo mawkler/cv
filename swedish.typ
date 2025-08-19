@@ -82,7 +82,6 @@
 
     #skill("Svenska", 5)
     #skill("Engelska", 5)
-    #skill("Spanska", 1)
 
     == Andra meriter
 

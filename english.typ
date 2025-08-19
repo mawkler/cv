@@ -80,7 +80,6 @@
 
     #skill("Swedish", 5)
     #skill("English", 5)
-    #skill("Spanish", 1)
 
     == Other Merits
 

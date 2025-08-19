@@ -89,7 +89,7 @@
       right_column({
         period
         h(3pt)
-        text(fill: secondary_color, fa-calendar(10pt, solid: true))
+        text(fill: secondary_color, fa-calendar(solid: true))
       }),
 
       text(style: "italic", company_name),
@@ -156,13 +156,14 @@
   skill("Rust", 4)
   skill("Go", 3)
   skill("TypeScript/JavaScript", 5)
-  skill("Lua", 4)
-  skill("Python", 3)
-  skill("Java", 4)
+  skill("Lua", 5)
+  skill("Python", 2)
+  skill("Java", 3)
   skill("Elixir", 2)
   skill("Haskell", 2)
   skill("SQL", 2)
-  skill("HTML/CSS", 4)
+  skill("Nix/NixOS", 3)
+  skill("HTML/CSS", 3)
   skill("C/C++", 2)
   skill("C#", 2)
   skill("Typst", 3)
@@ -174,7 +175,7 @@
   skill("Neovim/Vim", 5)
   skill("Git", 5)
   skill("OpenAPI/Swagger", 3)
-  skill("Jest", 5)
+  skill("Jest", 4)
   skill("Microsoft Azure", 3)
   skill("Serverless", 3)
   skill("Protobuf", 2)
