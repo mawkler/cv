@@ -46,6 +46,7 @@ jobs:
             swedish.pdf
             english-thumbnail.png
             swedish-thumbnail.png
-          tag_name: ${{ github.ref_name == 'main' && 'latest' || github.ref_name }}
+          target_commitish: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name == 'main' && 'latest' || github.ref_name }}-run
           draft: false
           prerelease: false
